@@ -14,7 +14,7 @@
   --bg:#FFF9F6; --surface:#FFFFFF; --surface2:#FCEFE8;
   --fg:#2A0D10; --fg2:#5B3037; --muted:#8C6469;
   --border:#F0DCD7; --border2:#F6E8E2;
-  --green:#1C7C4C; --green-lt:#E3F5E9;
+  --green:#1C7C4C;
   --sh-xs:0 1px 4px rgba(155,27,48,.06);
   --sh-sm:0 4px 14px rgba(155,27,48,.10);
   --sh-md:0 10px 30px rgba(155,27,48,.13);
@@ -38,7 +38,6 @@ button{font-family:var(--sans);cursor:pointer;border:none;}
 .skip{position:absolute;top:-100px;left:16px;background:var(--brand);color:#fff;padding:8px 16px;border-radius:var(--r-sm);font-weight:600;z-index:9999;transition:top .15s;}
 .skip:focus{top:16px;}
 
-/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;height:76px;background:rgba(255,249,246,.96);backdrop-filter:blur(18px) saturate(180%);border-bottom:1px solid var(--border2);display:flex;align-items:center;justify-content:space-between;padding:0 60px;z-index:1000;transition:box-shadow .22s var(--ease);}
 .nav.scrolled{box-shadow:var(--sh-sm);}
 .nav-brand{display:flex;align-items:center;gap:12px;}
@@ -59,92 +58,83 @@ button{font-family:var(--sans);cursor:pointer;border:none;}
 .nav-toggle:hover{background:var(--brand-lt);}
 .nav-toggle span{width:22px;height:2px;background:var(--fg);border-radius:2px;transition:all .22s var(--ease);}
 
-/* HERO — centered logo design */
-.hero{
-  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:150px 24px 80px;background:var(--bg);position:relative;overflow:hidden;
-}
-.hero::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 55% 45% at 50% 0%,rgba(155,27,48,.06) 0%,transparent 70%),
-    radial-gradient(ellipse 40% 40% at 85% 80%,rgba(199,154,61,.10) 0%,transparent 65%),
-    radial-gradient(ellipse 40% 40% at 15% 85%,rgba(155,27,48,.05) 0%,transparent 65%);
-}
-.hero-logo-ring{
-  position:relative;z-index:1;width:148px;height:148px;border-radius:50%;
-  background:var(--surface);border:3px solid var(--gold);
-  box-shadow:var(--sh-lg);display:grid;place-items:center;overflow:hidden;
-  margin-bottom:28px;opacity:0;transform:scale(.85);
-  animation:popIn .7s var(--ease) .1s forwards;
-}
+.hero{min-height:96vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 24px 70px;background:var(--bg);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 45% at 50% 0%,rgba(155,27,48,.06) 0%,transparent 70%),radial-gradient(ellipse 40% 40% at 85% 80%,rgba(199,154,61,.10) 0%,transparent 65%),radial-gradient(ellipse 40% 40% at 15% 85%,rgba(155,27,48,.05) 0%,transparent 65%);}
+.hero-logo-ring{position:relative;z-index:1;width:148px;height:148px;border-radius:50%;background:var(--surface);border:3px solid var(--gold);box-shadow:var(--sh-lg);display:grid;place-items:center;overflow:hidden;margin-bottom:28px;opacity:0;transform:scale(.85);animation:popIn .7s var(--ease) .1s forwards;}
 .hero-logo-ring img{width:100%;height:100%;object-fit:cover;}
 @keyframes popIn{to{opacity:1;transform:scale(1);}}
-.hero-eyebrow{
-  position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;
-  background:var(--brand-lt);border:1px solid rgba(155,27,48,.18);
-  color:var(--brand-dk);padding:6px 18px;border-radius:50px;
-  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;
-  opacity:0;animation:fadeUp .6s var(--ease) .25s forwards;
-}
+.hero-eyebrow{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;background:var(--brand-lt);border:1px solid rgba(155,27,48,.18);color:var(--brand-dk);padding:6px 18px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fadeUp .6s var(--ease) .25s forwards;}
 .hero-eyebrow svg{width:11px;height:11px;fill:currentColor;}
-.brand-title{
-  position:relative;z-index:1;font-family:var(--serif);font-weight:700;line-height:1;margin-bottom:18px;
-  opacity:0;animation:fadeUp .7s var(--ease) .35s forwards;
-}
-.brand-title .b1{display:block;font-size:clamp(46px,7vw,76px);color:var(--brand);letter-spacing:3px;}
-.brand-title .b2{display:block;font-size:clamp(16px,2vw,22px);color:var(--gold-dk);letter-spacing:10px;font-weight:600;margin-top:6px;}
-.hero h1{
-  position:relative;z-index:1;font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:600;
-  line-height:1.3;color:var(--fg2);letter-spacing:-.2px;margin-bottom:18px;max-width:680px;
-  opacity:0;animation:fadeUp .7s var(--ease) .45s forwards;
-}
+.brand-title{position:relative;z-index:1;font-family:var(--serif);font-weight:700;line-height:1;margin-bottom:18px;opacity:0;animation:fadeUp .7s var(--ease) .35s forwards;}
+.brand-title .b1{display:block;font-size:clamp(44px,6.5vw,72px);color:var(--brand);letter-spacing:3px;}
+.brand-title .b2{display:block;font-size:clamp(15px,2vw,21px);color:var(--gold-dk);letter-spacing:10px;font-weight:600;margin-top:6px;}
+.hero h1{position:relative;z-index:1;font-family:var(--serif);font-size:clamp(22px,2.8vw,33px);font-weight:600;line-height:1.3;color:var(--fg2);letter-spacing:-.2px;margin-bottom:16px;max-width:680px;opacity:0;animation:fadeUp .7s var(--ease) .45s forwards;}
 .hero h1 em{font-style:italic;color:var(--brand);font-weight:600;}
-.hero-desc{
-  position:relative;z-index:1;font-size:16px;color:var(--muted);line-height:1.75;max-width:480px;margin-bottom:32px;
-  opacity:0;animation:fadeUp .7s var(--ease) .55s forwards;
-}
-.hero-actions{
-  position:relative;z-index:1;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:52px;
-  opacity:0;animation:fadeUp .7s var(--ease) .65s forwards;
-}
+.hero-desc{position:relative;z-index:1;font-size:15px;color:var(--muted);line-height:1.75;max-width:480px;margin-bottom:28px;opacity:0;animation:fadeUp .7s var(--ease) .55s forwards;}
+.hero-actions{position:relative;z-index:1;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:8px;opacity:0;animation:fadeUp .7s var(--ease) .65s forwards;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:50px;padding:13px 32px;border-radius:var(--r-sm);font-size:15px;font-weight:600;cursor:pointer;transition:all .22s var(--ease);}
-.btn svg{width:16px;height:16px;flex-shrink:0;}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:12px 30px;border-radius:var(--r-sm);font-size:14px;font-weight:600;cursor:pointer;transition:all .22s var(--ease);}
+.btn svg{flex-shrink:0;}
 .btn-primary{background:var(--green);color:#fff;box-shadow:0 4px 14px rgba(28,124,76,.30);}
 .btn-primary:hover{background:#15603A;transform:translateY(-2px);box-shadow:0 10px 28px rgba(28,124,76,.40);}
 .btn-outline{background:var(--surface);color:var(--fg);border:1.5px solid var(--border);box-shadow:var(--sh-xs);}
 .btn-outline:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-1px);box-shadow:var(--sh-sm);}
 
-.hero-strip{
-  position:relative;z-index:1;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;max-width:760px;
-  opacity:0;animation:fadeUp .7s var(--ease) .75s forwards;
-}
-.hs-card{
-  background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-lg);overflow:hidden;
-  width:130px;box-shadow:var(--sh-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease);
-}
-.hs-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);}
-.hs-card img{width:100%;aspect-ratio:3/4;object-fit:cover;}
-.hs-card span{display:block;font-size:11px;font-weight:600;color:var(--fg2);padding:8px 10px;text-align:center;}
-
-/* STRIP — category band */
 .strip{background:linear-gradient(90deg,var(--brand-dk),var(--brand) 50%,var(--brand-dk));color:#fff;display:grid;grid-template-columns:repeat(4,1fr);}
-.strip-item{padding:22px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.12);transition:background .15s;}
+.strip-item{padding:20px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.12);transition:background .15s;}
 .strip-item:last-child{border-right:none;}
 .strip-item:hover{background:rgba(255,255,255,.07);}
-.strip-n{font-family:var(--serif);font-size:26px;font-weight:700;margin-bottom:3px;color:var(--gold-lt);}
-.strip-l{font-size:11px;opacity:.85;letter-spacing:.7px;text-transform:uppercase;}
+.strip-n{font-family:var(--serif);font-size:24px;font-weight:700;margin-bottom:3px;color:var(--gold-lt);}
+.strip-l{font-size:10px;opacity:.85;letter-spacing:.7px;text-transform:uppercase;}
 
-/* SHARED SECTION */
-.sec{padding:96px 60px;}
-.sec-inner{max-width:1200px;margin:0 auto;}
+.sec{padding:88px 60px;}
+.sec-inner{max-width:1260px;margin:0 auto;}
+.sec-hd{text-align:center;margin-bottom:48px;}
 .sec-tag{display:inline-block;background:var(--brand-lt);color:var(--brand-dk);border:1px solid rgba(155,27,48,.15);padding:3px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
-.sec-title{font-family:var(--serif);font-size:clamp(30px,4vw,46px);font-weight:700;color:var(--fg);line-height:1.1;margin-bottom:14px;letter-spacing:-.3px;}
+.sec-title{font-family:var(--serif);font-size:clamp(28px,3.6vw,42px);font-weight:700;color:var(--fg);line-height:1.1;margin-bottom:12px;letter-spacing:-.3px;}
 .sec-title em{font-style:italic;color:var(--brand);}
-.sec-sub{font-size:16px;color:var(--muted);line-height:1.7;max-width:560px;}
+.sec-sub{font-size:15px;color:var(--muted);line-height:1.7;max-width:540px;margin:0 auto;}
 
-/* ABOUT */
+/* CATEGORY GRID */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.cat-card{position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:3/4;cursor:pointer;box-shadow:var(--sh-sm);transition:transform .3s var(--ease),box-shadow .3s;}
+.cat-card:hover{transform:translateY(-8px);box-shadow:var(--sh-lg);}
+.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease);}
+.cat-card:hover img{transform:scale(1.07);}
+.cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(42,13,16,.80) 0%,rgba(42,13,16,.08) 55%,transparent 100%);}
+.cat-info{position:absolute;bottom:0;left:0;right:0;padding:20px 18px;}
+.cat-name{font-family:var(--serif);font-size:21px;font-weight:700;color:#fff;margin-bottom:4px;}
+.cat-cta{font-size:12px;color:rgba(255,255,255,.75);font-weight:500;}
+.cat-card:hover .cat-cta{color:var(--gold-lt);}
+
+/* PRODUCTS */
+.menu-sec{background:var(--surface2);}
+.menu-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;}
+.mc{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border2);box-shadow:var(--sh-xs);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;}
+.mc:hover{transform:translateY(-7px);box-shadow:var(--sh-lg);border-color:rgba(155,27,48,.2);}
+.mc-img{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--surface2);}
+.mc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+.mc:hover .mc-img img{transform:scale(1.08);}
+.mc-body{padding:12px;}
+.order-btn{width:100%;text-align:center;background:var(--green);color:#fff;border:1.5px solid var(--green);padding:8px 14px;border-radius:var(--r-sm);font-size:12px;font-weight:600;min-height:36px;display:flex;align-items:center;justify-content:center;gap:5px;transition:all .15s var(--ease);}
+.order-btn:hover{background:#15603A;border-color:#15603A;}
+.order-btn svg{width:12px;height:12px;}
+.menu-cta{text-align:center;margin-top:44px;}
+
+/* OFFER BANNER */
+.offer-sec{background:linear-gradient(135deg,var(--brand-dk) 0%,var(--brand) 55%,#C0253A 100%);color:#fff;padding:68px 60px;text-align:center;position:relative;overflow:hidden;}
+.offer-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 50%,rgba(199,154,61,.18) 0%,transparent 50%),radial-gradient(circle at 82% 50%,rgba(255,255,255,.05) 0%,transparent 50%);pointer-events:none;}
+.offer-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;}
+.offer-tag{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);padding:4px 16px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;}
+.offer-h2{font-family:var(--serif);font-size:clamp(28px,4vw,46px);font-weight:800;line-height:1.15;margin-bottom:14px;letter-spacing:-.4px;}
+.offer-h2 em{font-style:italic;color:var(--gold-lt);}
+.offer-sub{font-size:15px;opacity:.85;margin-bottom:28px;line-height:1.7;}
+.offer-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-white{background:#fff;color:var(--brand);font-weight:700;}
+.btn-white:hover{background:var(--brand-lt);transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.18);}
+.btn-outline-w{border:2px solid rgba(255,255,255,.6);color:#fff;font-weight:600;}
+.btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-1px);}
+
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .about-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .about-gallery img{width:100%;object-fit:cover;border-radius:var(--r-lg);transition:transform .4s var(--ease);}
@@ -155,31 +145,7 @@ button{font-family:var(--sans);cursor:pointer;border:none;}
 .chip{background:var(--surface2);border:1px solid var(--border2);color:var(--fg2);padding:6px 16px;border-radius:50px;font-size:13px;font-weight:500;transition:all .15s;}
 .chip:hover{background:var(--brand-lt);border-color:rgba(155,27,48,.2);color:var(--brand);}
 
-/* PRODUCTS / CATALOG */
-.menu-sec{background:var(--surface2);}
-.menu-hd{text-align:center;margin-bottom:56px;}
-.menu-hd .sec-sub{margin:0 auto;}
-.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.mc{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border2);box-shadow:var(--sh-xs);display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;}
-.mc:hover{transform:translateY(-9px);box-shadow:var(--sh-lg);border-color:rgba(155,27,48,.2);}
-.mc-img{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--surface2);}
-.mc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
-.mc:hover .mc-img img{transform:scale(1.08);}
-.mc-badge{position:absolute;top:12px;left:12px;padding:3px 11px;border-radius:50px;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
-.b-new{background:var(--brand);color:#fff;}
-.b-pop{background:var(--gold-dk);color:#fff;}
-.mc-body{padding:18px;flex:1;display:flex;flex-direction:column;}
-.mc-name{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--fg);margin-bottom:6px;}
-.mc-desc{font-size:13px;color:var(--muted);line-height:1.65;flex:1;margin-bottom:16px;}
-.mc-foot{display:flex;align-items:center;justify-content:center;}
-.order-btn{width:100%;text-align:center;background:var(--green);color:#fff;border:1.5px solid var(--green);padding:9px 18px;border-radius:var(--r-sm);font-size:13px;font-weight:600;min-height:40px;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s var(--ease);}
-.order-btn:hover{background:#15603A;border-color:#15603A;}
-.order-btn svg{width:14px;height:14px;}
-.menu-cta{text-align:center;margin-top:48px;}
-
-/* REVIEWS */
 .rev-sec{background:var(--surface);}
-.rev-hd{text-align:center;margin-bottom:56px;}
 .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .rv{background:var(--bg);border:1px solid var(--border2);border-radius:var(--r-lg);padding:32px;transition:transform .25s,box-shadow .25s;}
 .rv:hover{transform:translateY(-5px);box-shadow:var(--sh-md);}
@@ -190,39 +156,35 @@ button{font-family:var(--sans);cursor:pointer;border:none;}
 .rv-name{font-weight:700;font-size:14px;color:var(--fg);}
 .rv-loc{font-size:12px;color:var(--muted);margin-top:1px;}
 
-/* CONTACT */
-.contact-sec{background:linear-gradient(135deg,var(--fg) 0%,#4A1218 55%,#2A0D10 100%);color:#fff;padding:96px 60px;position:relative;overflow:hidden;}
+.contact-sec{background:linear-gradient(135deg,var(--fg) 0%,#4A1218 55%,#2A0D10 100%);color:#fff;padding:88px 60px;position:relative;overflow:hidden;}
 .contact-sec::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 8% 55%,rgba(155,27,48,.22) 0%,transparent 55%),radial-gradient(circle at 92% 20%,rgba(199,154,61,.14) 0%,transparent 45%);}
 .contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:1;}
 .contact-tag{display:inline-block;background:rgba(155,27,48,.24);border:1px solid rgba(155,27,48,.38);color:#F5A8B5;padding:3px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
-.contact-h2{font-family:var(--serif);font-size:clamp(32px,4vw,50px);font-weight:700;line-height:1.1;margin-bottom:14px;}
+.contact-h2{font-family:var(--serif);font-size:clamp(30px,3.8vw,48px);font-weight:700;line-height:1.1;margin-bottom:14px;}
 .contact-h2 em{font-style:italic;color:var(--gold);}
-.contact-sub{color:rgba(255,255,255,.68);font-size:16px;line-height:1.75;margin-bottom:36px;}
+.contact-sub{color:rgba(255,255,255,.68);font-size:15px;line-height:1.75;margin-bottom:34px;}
 .contact-btns{display:flex;flex-direction:column;gap:14px;}
-.c-btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 36px;border-radius:var(--r-md);font-size:16px;font-weight:700;min-height:52px;transition:all .22s var(--ease);}
-.c-btn svg{width:20px;height:20px;flex-shrink:0;}
+.c-btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 32px;border-radius:var(--r-md);font-size:15px;font-weight:700;min-height:52px;transition:all .22s var(--ease);}
 .c-call{background:var(--brand);color:#fff;box-shadow:0 4px 16px rgba(155,27,48,.38);}
 .c-call:hover{background:var(--brand-dk);transform:translateY(-2px);box-shadow:0 12px 32px rgba(155,27,48,.46);}
 .c-wa{background:var(--green);color:#fff;box-shadow:0 4px 16px rgba(28,124,76,.32);}
 .c-wa:hover{background:#15603A;transform:translateY(-2px);box-shadow:0 12px 32px rgba(28,124,76,.40);}
 .info-list{display:flex;flex-direction:column;gap:14px;}
-.info-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:var(--r-md);padding:20px 22px;display:flex;gap:16px;align-items:flex-start;transition:background .15s;}
+.info-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:var(--r-md);padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:background .15s;}
 .info-item:hover{background:rgba(255,255,255,.11);}
-.info-icon{width:44px;height:44px;background:var(--brand);border-radius:var(--r-sm);display:grid;place-items:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(155,27,48,.32);}
-.info-title{font-weight:700;font-size:14px;color:#fff;margin-bottom:3px;}
+.info-icon{width:42px;height:42px;background:var(--brand);border-radius:var(--r-sm);display:grid;place-items:center;font-size:17px;flex-shrink:0;box-shadow:0 2px 8px rgba(155,27,48,.32);}
+.info-title{font-weight:700;font-size:13px;color:#fff;margin-bottom:3px;}
 .info-val{font-size:13px;color:rgba(255,255,255,.68);line-height:1.6;}
 
-/* FOOTER */
 footer{background:#220A0C;color:rgba(255,255,255,.52);padding:24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06);}
 .ft-brand{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--gold);}
 .ft-copy{font-size:13px;}
 .ft-link{font-size:13px;color:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.14);padding:6px 14px;border-radius:var(--r-sm);transition:all .15s;}
 .ft-link:hover{color:#fff;border-color:rgba(255,255,255,.4);}
 
-/* RESPONSIVE */
-@media(max-width:1024px){
+@media(max-width:1100px){
   .nav{padding:0 40px;}
-  .menu-grid{grid-template-columns:repeat(2,1fr);}
+  .cat-grid,.menu-grid{grid-template-columns:repeat(3,1fr);}
 }
 @media(max-width:768px){
   .nav{padding:0 20px;}
@@ -231,19 +193,19 @@ footer{background:#220A0C;color:rgba(255,255,255,.52);padding:24px 60px;display:
   .nav-links.open{display:flex;flex-direction:column;position:fixed;top:76px;left:0;right:0;background:#fff;padding:16px 20px;border-bottom:1px solid var(--border2);gap:4px;box-shadow:var(--sh-md);}
   .nav-links.open a{padding:10px 8px;border-bottom:1px solid var(--border2);}
   .nav-links.open .nav-cta{justify-content:center;margin-top:8px;}
-  .hero{padding:130px 20px 56px;}
-  .hero-logo-ring{width:112px;height:112px;}
-  .brand-title .b1{font-size:42px;}
-  .hero h1{font-size:22px;}
-  .hs-card{width:96px;}
+  .hero{padding:130px 20px 50px;}
+  .hero-logo-ring{width:108px;height:108px;}
+  .brand-title .b1{font-size:38px;}
+  .hero h1{font-size:20px;}
   .strip{grid-template-columns:repeat(2,1fr);}
   .strip-item{border-bottom:1px solid rgba(255,255,255,.12);}
-  .sec{padding:64px 20px;}
-  .about-grid{grid-template-columns:1fr;gap:40px;}
-  .menu-grid{grid-template-columns:1fr;}
+  .sec{padding:56px 20px;}
+  .cat-grid,.menu-grid{grid-template-columns:repeat(2,1fr);}
+  .about-grid{grid-template-columns:1fr;gap:36px;}
   .rev-grid{grid-template-columns:1fr;}
-  .contact-sec{padding:64px 20px;}
-  .contact-inner{grid-template-columns:1fr;gap:48px;}
+  .offer-sec{padding:48px 20px;}
+  .contact-sec{padding:56px 20px;}
+  .contact-inner{grid-template-columns:1fr;gap:44px;}
   footer{flex-direction:column;gap:12px;text-align:center;padding:24px 20px;}
 }
 @media(prefers-reduced-motion:reduce){
@@ -264,51 +226,25 @@ footer{background:#220A0C;color:rgba(255,255,255,.52);padding:24px 60px;display:
   </button>
   <div class="nav-links" id="navMenu">
     <a href="#hero">Home</a>
-    <a href="#about">About</a>
+    <a href="#categories">Categories</a>
     <a href="#collection">Collection</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
-    <a href="catalog.html" class="nav-cta">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      Full Catalog
-    </a>
+    <a href="catalog.html" class="nav-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M3 6h18M3 12h18M3 18h18"/></svg> Full Catalog</a>
   </div>
 </nav>
 
 <main id="main">
 
-<!-- HERO — centered logo, no live-update pill -->
 <section class="hero" id="hero" aria-labelledby="h1">
-  <div class="hero-logo-ring" aria-hidden="true">
-    <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.48.18%20logo.jpeg" alt="">
-  </div>
-  <div class="hero-eyebrow">
-    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-    Surat's Finest Saree Collection
-  </div>
-  <div class="brand-title">
-    <span class="b1">SHUHAAGAN</span>
-    <span class="b2">SAREES</span>
-  </div>
+  <div class="hero-logo-ring" aria-hidden="true"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.48.18%20logo.jpeg" alt=""></div>
+  <div class="hero-eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" width="11" height="11"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Surat's Finest Saree Collection</div>
+  <div class="brand-title"><span class="b1">SHUHAAGAN</span><span class="b2">SAREES</span></div>
   <h1 id="h1">Elegance Woven in <em>Every Thread</em></h1>
-  <p class="hero-desc">
-    Discover stunning Sarees, Lehengas, Suits and Kurtis crafted with love at Shuhaagan Sarees. Located at Surat, Gujarat. Order easily on WhatsApp!
-  </p>
+  <p class="hero-desc">Discover stunning Sarees, Lehengas, Suits and Kurtis crafted with love at Shuhaagan Sarees. Located at Surat, Gujarat. Order easily on WhatsApp!</p>
   <div class="hero-actions">
-    <a href="catalog.html" class="btn btn-outline">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      View Catalog
-    </a>
-    <a href="https://wa.me/919998148511" class="btn btn-primary">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Order on WhatsApp
-    </a>
-  </div>
-  <div class="hero-strip" aria-label="Featured pieces">
-    <div class="hs-card"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.24%20saree1.jpeg" alt="Featured saree 1" loading="lazy"><span>Sarees</span></div>
-    <div class="hs-card"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Featured saree 2" loading="lazy"><span>Lehenga</span></div>
-    <div class="hs-card"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Featured saree 3" loading="lazy"><span>Suits</span></div>
-    <div class="hs-card"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree4.jpeg" alt="Featured saree 4" loading="lazy"><span>Kurtis</span></div>
+    <a href="catalog.html" class="btn btn-outline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M3 6h18M3 12h18M3 18h18"/></svg> View Catalog</a>
+    <a href="https://wa.me/919998148511" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order on WhatsApp</a>
   </div>
 </section>
 
@@ -319,132 +255,228 @@ footer{background:#220A0C;color:rgba(255,255,255,.52);padding:24px 60px;display:
   <div class="strip-item" role="listitem"><div class="strip-n">Kurtis</div><div class="strip-l">Casual & Office Wear</div></div>
 </div>
 
-<section class="sec" id="about" aria-labelledby="about-h">
+<!-- SHOP BY CATEGORY -->
+<section class="sec" id="categories">
   <div class="sec-inner">
-    <div class="about-grid">
-      <div class="about-gallery">
-        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Shuhaagan Sarees collection display" width="600" height="230" loading="lazy">
-        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Beautiful embroidered saree" width="300" height="155" loading="lazy">
-        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree4.jpeg" alt="Elegant saree with detailed border" width="300" height="155" loading="lazy">
-      </div>
-      <div>
-        <div class="sec-tag">Our Story</div>
-        <h2 class="sec-title" id="about-h">About <em>Shuhaagan Sarees</em></h2>
-        <p style="color:var(--muted);line-height:1.8;margin-bottom:14px;font-size:16px;">
-          At Shuhaagan Sarees, we bring you a stunning collection of Sarees, Lehengas, Suits and Kurtis — handpicked for quality, design and elegance. Perfect for weddings, festivals and everyday wear.
-        </p>
-        <p style="color:var(--muted);line-height:1.8;margin-bottom:14px;font-size:16px;">
-          Located at <strong style="color:var(--fg2);">Surat, Gujarat</strong>. New designs added daily — message us on WhatsApp for the latest arrivals!
-        </p>
-        <div class="chips">
-          <span class="chip">Sarees</span>
-          <span class="chip">Lehenga</span>
-          <span class="chip">Suits</span>
-          <span class="chip">Kurtis</span>
-          <span class="chip">Bridal Wear</span>
-          <span class="chip">WhatsApp Orders</span>
-        </div>
-      </div>
+    <div class="sec-hd">
+      <div class="sec-tag">Shop by Category</div>
+      <h2 class="sec-title">Explore Our <em>Collections</em></h2>
+      <p class="sec-sub">From everyday kurtis to bridal lehengas — find the perfect look for every moment</p>
     </div>
-  </div>
-</section>
-
-<section class="sec menu-sec" id="collection" aria-labelledby="menu-h">
-  <div class="sec-inner">
-    <div class="menu-hd">
-      <div class="sec-tag">Our Collection</div>
-      <h2 class="sec-title" id="menu-h">Featured <em>Designs</em></h2>
-      <p class="sec-sub">Fresh arrivals — message us on WhatsApp to order or check availability</p>
-    </div>
-    <div class="menu-grid">
-      <article class="mc">
-        <div class="mc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.24%20saree1.jpeg" alt="Red embroidered saree with golden booti work" width="400" height="530" loading="lazy">
-          <span class="mc-badge b-new">New</span>
-        </div>
-        <div class="mc-body">
-          <h3 class="mc-name">Red Embroidered Saree</h3>
-          <p class="mc-desc">Rich red saree with intricate golden booti embroidery — perfect for weddings and festive occasions.</p>
-          <div class="mc-foot"><a href="https://wa.me/919998148511?text=Hi! I am interested in the Red Embroidered Saree shown on your website." class="order-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Order on WhatsApp</a></div>
-        </div>
-      </article>
-      <article class="mc">
-        <div class="mc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Teal shimmer saree with stone work border" width="400" height="530" loading="lazy">
-          <span class="mc-badge b-pop">Popular</span>
-        </div>
-        <div class="mc-body">
-          <h3 class="mc-name">Teal Shimmer Saree</h3>
-          <p class="mc-desc">Elegant teal-toned saree with sparkling stone-work border — perfect for parties and receptions.</p>
-          <div class="mc-foot"><a href="https://wa.me/919998148511?text=Hi! I am interested in the Teal Shimmer Saree shown on your website." class="order-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Order on WhatsApp</a></div>
-        </div>
-      </article>
-      <article class="mc">
-        <div class="mc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Pink net dupatta with sequin work" width="400" height="530" loading="lazy">
-        </div>
-        <div class="mc-body">
-          <h3 class="mc-name">Pink Sequin Dupatta Set</h3>
-          <p class="mc-desc">Soft pink net dupatta with delicate sequin and stone detailing — light and graceful.</p>
-          <div class="mc-foot"><a href="https://wa.me/919998148511?text=Hi! I am interested in the Pink Sequin Dupatta Set shown on your website." class="order-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Order on WhatsApp</a></div>
-        </div>
-      </article>
-      <article class="mc">
-        <div class="mc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree4.jpeg" alt="Pastel pink floral embroidered dupatta" width="400" height="530" loading="lazy">
-          <span class="mc-badge b-new">New</span>
-        </div>
-        <div class="mc-body">
-          <h3 class="mc-name">Pastel Floral Embroidered Set</h3>
-          <p class="mc-desc">Beautiful pastel pink fabric with delicate floral embroidery and beadwork — elegant and unique.</p>
-          <div class="mc-foot"><a href="https://wa.me/919998148511?text=Hi! I am interested in the Pastel Floral Embroidered Set shown on your website." class="order-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            Order on WhatsApp</a></div>
-        </div>
-      </article>
-    </div>
-    <div class="menu-cta">
-      <a href="catalog.html" class="btn btn-primary" style="background:var(--brand);box-shadow:0 4px 14px rgba(155,27,48,.30);">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        View Full Catalog
+    <div class="cat-grid">
+      <a href="https://wa.me/919998148511?text=Hi!%20I'd%20like%20to%20browse%20your%20Saree%20collection." class="cat-card">
+        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree1.jpeg" alt="Sarees collection" loading="lazy">
+        <div class="cat-overlay"></div>
+        <div class="cat-info"><div class="cat-name">Sarees</div><div class="cat-cta">View Collection →</div></div>
+      </a>
+      <a href="https://wa.me/919998148511?text=Hi!%20I'd%20like%20to%20browse%20your%20Lehenga%20collection." class="cat-card">
+        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree16.jpeg" alt="Lehenga collection" loading="lazy">
+        <div class="cat-overlay"></div>
+        <div class="cat-info"><div class="cat-name">Lehenga</div><div class="cat-cta">View Collection →</div></div>
+      </a>
+      <a href="https://wa.me/919998148511?text=Hi!%20I'd%20like%20to%20browse%20your%20Suits%20collection." class="cat-card">
+        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree19.jpeg" alt="Suits collection" loading="lazy">
+        <div class="cat-overlay"></div>
+        <div class="cat-info"><div class="cat-name">Suits</div><div class="cat-cta">View Collection →</div></div>
+      </a>
+      <a href="https://wa.me/919998148511?text=Hi!%20I'd%20like%20to%20browse%20your%20Kurtis%20collection." class="cat-card">
+        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree22.jpeg" alt="Kurtis collection" loading="lazy">
+        <div class="cat-overlay"></div>
+        <div class="cat-info"><div class="cat-name">Kurtis</div><div class="cat-cta">View Collection →</div></div>
       </a>
     </div>
   </div>
 </section>
 
-<section class="sec rev-sec" id="reviews" aria-labelledby="rev-h">
+<!-- ABOUT -->
+<section class="sec" id="about" aria-labelledby="about-h">
   <div class="sec-inner">
-    <div class="rev-hd">
-      <div class="sec-tag">Customer Love</div>
-      <h2 class="sec-title" id="rev-h">What Our <em>Customers</em> Say</h2>
-      <p class="sec-sub" style="margin:0 auto;">Real reviews from real customers in Surat</p>
-    </div>
-    <div class="rev-grid">
-      <article class="rv">
-        <div class="rv-stars" aria-label="5 stars">★★★★★</div>
-        <p class="rv-text">"The saree quality is amazing and the embroidery work is so detailed! Got so many compliments at the wedding I wore it to."</p>
-        <div class="rv-author"><div class="rv-av" aria-hidden="true">K</div><div><div class="rv-name">Kavita Patel</div><div class="rv-loc">Adajan, Surat</div></div></div>
-      </article>
-      <article class="rv">
-        <div class="rv-stars" aria-label="5 stars">★★★★★</div>
-        <p class="rv-text">"Beautiful collection of lehengas and suits. Ordering on WhatsApp was super easy and they replied quickly with all details."</p>
-        <div class="rv-author"><div class="rv-av" aria-hidden="true">S</div><div><div class="rv-name">Sneha Joshi</div><div class="rv-loc">Vesu, Surat</div></div></div>
-      </article>
-      <article class="rv">
-        <div class="rv-stars" aria-label="5 stars">★★★★★</div>
-        <p class="rv-text">"Loved my new kurti set! Great fabric quality and the colors are exactly as shown in the photos. Highly recommend Shuhaagan Sarees."</p>
-        <div class="rv-author"><div class="rv-av" aria-hidden="true">P</div><div><div class="rv-name">Priti Rana</div><div class="rv-loc">Ring Road, Surat</div></div></div>
-      </article>
+    <div class="about-grid">
+      <div class="about-gallery">
+        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree5.jpeg" alt="Shuhaagan Sarees collection display" loading="lazy">
+        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree6.jpeg" alt="Beautiful embroidered saree" loading="lazy">
+        <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree7.jpeg" alt="Elegant saree with detailed border" loading="lazy">
+      </div>
+      <div>
+        <div class="sec-tag">Our Story</div>
+        <h2 class="sec-title" id="about-h">About <em>Shuhaagan Sarees</em></h2>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:14px;font-size:16px;">At Shuhaagan Sarees, we bring you a stunning collection of Sarees, Lehengas, Suits and Kurtis — handpicked for quality, design and elegance. Perfect for weddings, festivals and everyday wear.</p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:14px;font-size:16px;">Located at <strong style="color:var(--fg2);">Surat, Gujarat</strong>. New designs added daily — message us on WhatsApp for the latest arrivals!</p>
+        <div class="chips">
+          <span class="chip">Sarees</span><span class="chip">Lehenga</span><span class="chip">Suits</span><span class="chip">Kurtis</span><span class="chip">Bridal Wear</span><span class="chip">WhatsApp Orders</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- FEATURED PRODUCTS -->
+<section class="sec menu-sec" id="collection" aria-labelledby="menu-h">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <div class="sec-tag">Our Collection</div>
+      <h2 class="sec-title" id="menu-h">Featured <em>Designs</em></h2>
+      <p class="sec-sub">Fresh arrivals — message us on WhatsApp to order or check availability</p>
+    </div>
+    <div class="menu-grid">
+      
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree1.jpeg" alt="Shuhaagan Sarees design 1" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%231%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree2.jpeg" alt="Shuhaagan Sarees design 2" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%232%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree3.jpeg" alt="Shuhaagan Sarees design 3" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%233%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree4.jpeg" alt="Shuhaagan Sarees design 4" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%234%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree5.jpeg" alt="Shuhaagan Sarees design 5" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%235%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree6.jpeg" alt="Shuhaagan Sarees design 6" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%236%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree7.jpeg" alt="Shuhaagan Sarees design 7" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%237%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree8.jpeg" alt="Shuhaagan Sarees design 8" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%238%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree9.jpeg" alt="Shuhaagan Sarees design 9" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%239%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree10.jpeg" alt="Shuhaagan Sarees design 10" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2310%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree11.jpeg" alt="Shuhaagan Sarees design 11" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2311%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree12.jpeg" alt="Shuhaagan Sarees design 12" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2312%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree13.jpeg" alt="Shuhaagan Sarees design 13" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2313%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree14.jpeg" alt="Shuhaagan Sarees design 14" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2314%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree15.jpeg" alt="Shuhaagan Sarees design 15" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2315%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree16.jpeg" alt="Shuhaagan Sarees design 16" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2316%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree17.jpeg" alt="Shuhaagan Sarees design 17" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2317%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree18.jpeg" alt="Shuhaagan Sarees design 18" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2318%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree19.jpeg" alt="Shuhaagan Sarees design 19" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2319%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+      <article class="mc">
+        <div class="mc-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/saree20.jpeg" alt="Shuhaagan Sarees design 20" loading="lazy"></div>
+        <div class="mc-body">
+          <div><a href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20design%20%2320%20shown%20on%20your%20website." class="order-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Order</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="menu-cta">
+      <a href="catalog.html" class="btn btn-primary" style="background:var(--brand);box-shadow:0 4px 14px rgba(155,27,48,.30);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M3 6h18M3 12h18M3 18h18"/></svg> View Full Catalog (23 designs)</a>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER BANNER -->
+<section class="offer-sec">
+  <div class="offer-inner">
+    <div class="offer-tag">Daily Updates</div>
+    <h2 class="offer-h2">New Arrivals,<br><em>Every Single Day</em></h2>
+    <p class="offer-sub">Be the first to see our latest designs. Message us on WhatsApp and we'll send you fresh arrivals as soon as they come in.</p>
+    <div class="offer-btns">
+      <a href="https://wa.me/919998148511?text=Hi!%20Please%20add%20me%20to%20your%20new%20arrivals%20list." class="btn btn-white"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Get Daily Updates</a>
+      <a href="tel:9998148511" class="btn btn-outline-w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec rev-sec" id="reviews" aria-labelledby="rev-h">
+  <div class="sec-inner">
+    <div class="sec-hd">
+      <div class="sec-tag">Customer Love</div>
+      <h2 class="sec-title" id="rev-h">What Our <em>Customers</em> Say</h2>
+      <p class="sec-sub">Real reviews from real customers in Surat</p>
+    </div>
+    <div class="rev-grid">
+      <article class="rv"><div class="rv-stars" aria-label="5 stars">★★★★★</div><p class="rv-text">"The saree quality is amazing and the embroidery work is so detailed! Got so many compliments at the wedding I wore it to."</p><div class="rv-author"><div class="rv-av" aria-hidden="true">K</div><div><div class="rv-name">Kavita Patel</div><div class="rv-loc">Adajan, Surat</div></div></div></article>
+      <article class="rv"><div class="rv-stars" aria-label="5 stars">★★★★★</div><p class="rv-text">"Beautiful collection of lehengas and suits. Ordering on WhatsApp was super easy and they replied quickly with all details."</p><div class="rv-author"><div class="rv-av" aria-hidden="true">S</div><div><div class="rv-name">Sneha Joshi</div><div class="rv-loc">Vesu, Surat</div></div></div></article>
+      <article class="rv"><div class="rv-stars" aria-label="5 stars">★★★★★</div><p class="rv-text">"Loved my new kurti set! Great fabric quality and the colors are exactly as shown in the photos. Highly recommend Shuhaagan Sarees."</p><div class="rv-author"><div class="rv-av" aria-hidden="true">P</div><div><div class="rv-name">Priti Rana</div><div class="rv-loc">Ring Road, Surat</div></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section class="contact-sec" id="contact" aria-labelledby="contact-h">
   <div class="contact-inner">
     <div>
@@ -452,14 +484,8 @@ footer{background:#220A0C;color:rgba(255,255,255,.52);padding:24px 60px;display:
       <h2 class="contact-h2" id="contact-h">Shop with <em>Shuhaagan</em> Today</h2>
       <p class="contact-sub">New arrivals added daily! Message us on WhatsApp for the latest sarees, lehengas, suits and kurtis — we'll send you photos and prices instantly.</p>
       <div class="contact-btns">
-        <a href="tel:9998148511" class="c-btn c-call" aria-label="Call 9998148511">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          Call: +91 9998148511
-        </a>
-        <a href="https://wa.me/919998148511" class="c-btn c-wa" aria-label="WhatsApp 9998148511">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          WhatsApp: +91 9998148511
-        </a>
+        <a href="tel:9998148511" class="c-btn c-call" aria-label="Call 9998148511"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg> Call: +91 9998148511</a>
+        <a href="https://wa.me/919998148511" class="c-btn c-wa" aria-label="WhatsApp 9998148511"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> WhatsApp: +91 9998148511</a>
       </div>
     </div>
     <div class="info-list">
@@ -481,60 +507,28 @@ footer{background:#220A0C;color:rgba(255,255,255,.52);padding:24px 60px;display:
 <script>
 (function(){
   var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function(){
-    nav.classList.toggle('scrolled', window.scrollY > 24);
-  }, {passive:true});
-
+  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 24); }, {passive:true});
   var btn = document.getElementById('navBtn');
   var menu = document.getElementById('navMenu');
   btn.addEventListener('click', function(){
     var open = menu.classList.toggle('open');
     btn.setAttribute('aria-expanded', open);
     var s = btn.querySelectorAll('span');
-    if(open){
-      s[0].style.cssText='transform:translateY(7px) rotate(45deg)';
-      s[1].style.cssText='opacity:0;transform:scaleX(0)';
-      s[2].style.cssText='transform:translateY(-7px) rotate(-45deg)';
-    } else {
-      s[0].style.cssText=s[1].style.cssText=s[2].style.cssText='';
-    }
+    if(open){ s[0].style.cssText='transform:translateY(7px) rotate(45deg)'; s[1].style.cssText='opacity:0;transform:scaleX(0)'; s[2].style.cssText='transform:translateY(-7px) rotate(-45deg)'; }
+    else { s[0].style.cssText=s[1].style.cssText=s[2].style.cssText=''; }
   });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-      btn.querySelectorAll('span').forEach(function(s){ s.style.cssText=''; });
-    });
-  });
-
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); btn.querySelectorAll('span').forEach(function(s){ s.style.cssText=''; }); }); });
   if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          e.target.style.opacity='1';
-          e.target.style.transform='translateY(0)';
-          io.unobserve(e.target);
-        }
-      });
-    },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-    document.querySelectorAll('.mc,.rv,.info-item,.chip,.hs-card').forEach(function(el){
-      el.style.opacity='0';
-      el.style.transform='translateY(18px)';
-      el.style.transition='opacity .4s ease, transform .4s ease';
-      io.observe(el);
-    });
+    var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; io.unobserve(e.target); } }); },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.mc,.rv,.info-item,.chip,.cat-card').forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(18px)'; el.style.transition='opacity .4s ease, transform .4s ease'; io.observe(el); });
   }
-
   var sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', function(){
     var y = window.scrollY + 100;
     sections.forEach(function(sec){
       var a = document.querySelector('.nav-links a[href="#'+sec.id+'"]');
       if(!a) return;
-      if(sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y){
-        document.querySelectorAll('.nav-links a').forEach(function(x){ x.style.color=''; });
-        a.style.color='var(--brand)';
-      }
+      if(sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y){ document.querySelectorAll('.nav-links a').forEach(function(x){ x.style.color=''; }); a.style.color='var(--brand)'; }
     });
   },{passive:true});
 })();
