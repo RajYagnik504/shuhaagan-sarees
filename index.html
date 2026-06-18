@@ -91,6 +91,8 @@ button{font-family:var(--sans);cursor:pointer;border:none;}
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s var(--ease);background-size:cover;background-position:center;}
 .hero-slide.active{opacity:1;}
 .hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(26,10,8,.82) 0%,rgba(26,10,8,.5) 55%,rgba(26,10,8,.15) 100%);}
+.hero-slide-video{background:#1A0A08;}
+.hero-slide-video::after{background:linear-gradient(105deg,rgba(26,10,8,.55) 0%,rgba(26,10,8,.35) 55%,rgba(26,10,8,.1) 100%);}
 .hero-content{position:relative;z-index:2;max-width:600px;padding:0 80px 60px;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(212,160,23,.15);border:1px solid rgba(212,160,23,.3);color:#F0C840;padding:5px 16px;border-radius:50px;font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:20px;}
 
@@ -356,6 +358,11 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:22px 56px;display:
     <div class="hero-slide" style="background-image:url('https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg')"></div>
     <div class="hero-slide" style="background-image:url('https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg')"></div>
     <div class="hero-slide" style="background-image:url('https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree4.jpeg')"></div>
+    <div class="hero-slide hero-slide-video">
+      <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
+        <source src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/is_ladki_ke_akhon_ko_pyaar_se_logo-video.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow">⭐ Surat's Favourite Saree Shop</div>
@@ -392,6 +399,7 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:22px 56px;display:
     <button class="sdot" data-idx="1" aria-label="Slide 2"></button>
     <button class="sdot" data-idx="2" aria-label="Slide 3"></button>
     <button class="sdot" data-idx="3" aria-label="Slide 4"></button>
+    <button class="sdot" data-idx="4" aria-label="Slide 5"></button>
   </div>
   <div class="slider-arrows">
     <button class="sarr" id="saPrev" aria-label="Previous slide">&#8592;</button>
