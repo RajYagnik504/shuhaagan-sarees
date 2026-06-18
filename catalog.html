@@ -3,764 +3,303 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shuhaagan Sarees Full Catalog — Browse 23+ Sarees, Lehengas, Suits & Kurtis. Order on WhatsApp from Surat, Gujarat.">
-<title>Full Catalog | Shuhaagan Sarees — Surat</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Shuhaagan Sarees — Full Catalog</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --brand:#C0392B; --brand-dk:#96281B; --brand-lt:#FDF0EE;
-  --gold:#D4A017; --gold-lt:#FFF8E7; --bg:#FAFAFA; --surface:#FFFFFF;
-  --fg:#1A0A08; --fg2:#4A1A14; --muted:#F5EDED; --border:#ECD8D6;
-  --text-muted:#9A7070; --serif:'Playfair Display',Georgia,serif;
-  --sans:'Inter',system-ui,sans-serif; --r-sm:8px; --r-md:14px;
-  --r-lg:20px; --r-xl:28px; --ease:cubic-bezier(.4,0,.2,1);
-  --sh-xs:0 1px 4px rgba(192,57,43,.05); --sh-sm:0 4px 16px rgba(192,57,43,.09);
-  --sh-md:0 12px 36px rgba(192,57,43,.13); --sh-lg:0 28px 64px rgba(192,57,43,.17);
+--brand:#E63946;
+--brand-dark:#B2222E;
+--brand-light:#FDECEE;
+--gold:#F4C430;
+--bg:#FFF5F5;
+--surface:#FFFFFF;
+--fg:#2B0A0A;
+--muted:#FFE9EA;
+--border:#F6D2D6;
+--text-muted:#9A7070;
+--shadow-sm:0 2px 8px rgba(230,57,70,0.06);
+--shadow-md:0 8px 24px rgba(230,57,70,0.10);
+--shadow-lg:0 20px 50px rgba(230,57,70,0.14);
+--radius:16px;
+--radius-sm:10px;
 }
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;font-size:16px;}
-body{font-family:var(--sans);background:var(--bg);color:var(--fg);line-height:1.6;overflow-x:hidden;}
-img{max-width:100%;height:auto;display:block;}
-a{color:inherit;text-decoration:none;}
-button{font-family:var(--sans);cursor:pointer;border:none;}
-:focus-visible{outline:3px solid var(--brand);outline-offset:3px;}
-::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-thumb{background:var(--brand);border-radius:2px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--fg);padding-bottom:90px;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
 
-/* -- ANNOUNCEMENT BAR -- */
-.ann-bar{position:fixed;top:0;width:100%;z-index:1100;background:var(--fg);color:#fff;font-size:12px;font-weight:500;letter-spacing:.4px;overflow:hidden;height:34px;display:flex;align-items:center;}
-.ann-track{display:flex;gap:80px;white-space:nowrap;animation:marquee 30s linear infinite;}
-.ann-track span{display:inline-flex;align-items:center;gap:8px;opacity:.88;}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* -- NAV -- */
-.nav{position:fixed;top:34px;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
-.nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:54px;}
-.nav-brand{display:flex;align-items:center;gap:12px;}
-.nav-logo{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid var(--border);flex-shrink:0;box-shadow:var(--sh-xs);}
-.nav-logo img{width:100%;height:100%;object-fit:cover;}
-.nav-name{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--fg);letter-spacing:.3px;line-height:1.1;}
+/* NAV */
+nav{position:fixed;top:0;width:100%;background:rgba(255,245,245,0.98);backdrop-filter:blur(16px);height:68px;padding:0 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);z-index:1000;box-shadow:0 1px 20px rgba(0,0,0,0.04);}
+.nav-brand{display:flex;align-items:center;gap:10px;}
+.nav-logo{width:36px;height:36px;background:var(--brand);border-radius:10px;display:grid;place-items:center;font-size:18px;}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--fg);letter-spacing:.3px;}
 .nav-name em{font-style:normal;color:var(--brand);}
-.nav-actions{display:flex;align-items:center;gap:20px;}
-.nav-action{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--text-muted);font-weight:500;transition:color .2s;}
-.nav-action:hover{color:var(--brand);}
-.wa-pill{display:flex;align-items:center;gap:6px;background:#25D366;color:#fff;padding:7px 16px;border-radius:50px;font-size:12.5px;font-weight:600;transition:background .2s;text-decoration:none;}
-.wa-pill:hover{background:#1EB858;}
-.back-link{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--brand);border:1.5px solid var(--brand);padding:7px 16px;border-radius:50px;transition:all .2s;text-decoration:none;}
-.back-link:hover{background:var(--brand);color:#fff;}
+.back-link{display:flex;align-items:center;gap:6px;text-decoration:none;color:var(--text-muted);font-size:14px;font-weight:500;padding:8px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);transition:all .2s;}
+.back-link:hover{color:var(--brand);border-color:var(--brand);}
 
-/* -- HERO -- */
-.hero{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:88px;background:linear-gradient(135deg,var(--fg) 0%,#3A0E0A 40%,#1A0A08 100%);}
-.hero::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 50%,rgba(192,57,43,.25) 0%,transparent 50%),radial-gradient(circle at 85% 30%,rgba(212,160,23,.12) 0%,transparent 45%);}
-.hero-inner{position:relative;z-index:2;text-align:center;padding:60px 20px;max-width:720px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(212,160,23,.15);border:1px solid rgba(212,160,23,.32);color:#F0C840;padding:5px 18px;border-radius:50px;font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:20px;}
-.hero h1{font-family:var(--serif);font-size:clamp(32px,5vw,56px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:14px;}
-.hero h1 em{font-style:italic;color:var(--gold);}
-.hero-desc{font-size:15px;color:rgba(255,255,255,.65);line-height:1.8;max-width:520px;margin:0 auto 28px;}
+/* HERO */
+.hero{background:linear-gradient(135deg,#2B0A0A 0%,var(--brand-dark) 50%,#5A1018 100%);padding:100px 56px 56px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:400px;height:400px;background:rgba(244,196,48,0.08);border-radius:50%;}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:300px;height:300px;background:rgba(230,57,70,0.1);border-radius:50%;}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;text-align:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(244,196,48,0.15);border:1px solid rgba(244,196,48,0.3);color:#F4C430;padding:6px 18px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:white;line-height:1.1;margin-bottom:14px;}
+.hero h1 em{font-style:normal;color:var(--gold);}
+.hero-sub{color:rgba(255,255,255,0.65);font-size:16px;line-height:1.7;margin-bottom:24px;}
 .hero-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.8);padding:7px 18px;border-radius:50px;font-size:12.5px;font-weight:500;}
+.hero-tag{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:500;}
 
-/* -- SEARCH & FILTER BAR -- */
-.filter-bar{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:88px;z-index:900;padding:20px 0;box-shadow:var(--sh-xs);}
-.filter-inner{max-width:1200px;margin:0 auto;padding:0 56px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.search-box{flex:1;min-width:260px;position:relative;}
-.search-box svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--text-muted);pointer-events:none;}
-.search-box input{width:100%;height:48px;padding:0 20px 0 48px;border:1.5px solid var(--border);border-radius:var(--r-md);font-size:14px;font-family:var(--sans);background:var(--bg);color:var(--fg);transition:all .2s;}
-.search-box input:focus{border-color:var(--brand);background:#fff;box-shadow:0 0 0 4px rgba(192,57,43,.08);outline:none;}
+/* SEARCH + TABS */
+.sticky-bar{position:sticky;top:68px;z-index:900;background:white;border-bottom:1px solid var(--border);}
+.search-wrap{padding:14px 56px 0;}
+.search-box{display:flex;align-items:center;gap:12px;background:var(--muted);border:1.5px solid var(--border);border-radius:50px;padding:10px 20px;max-width:500px;transition:all .2s;}
+.search-box:focus-within{border-color:var(--brand);background:white;box-shadow:0 0 0 3px rgba(230,57,70,0.08);}
+.search-box input{border:none;background:transparent;outline:none;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--fg);width:100%;}
 .search-box input::placeholder{color:var(--text-muted);}
-.filter-tabs{display:flex;gap:8px;flex-wrap:wrap;}
-.ftab{padding:10px 20px;border-radius:50px;font-size:13px;font-weight:600;border:1.5px solid var(--border);background:#fff;color:var(--fg);cursor:pointer;transition:all .2s;}
-.ftab:hover{border-color:var(--brand);color:var(--brand);}
-.ftab.active{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 4px 12px rgba(192,57,43,.25);}
-.ftab .count{font-size:11px;opacity:.7;margin-left:4px;}
-.result-count{font-size:13px;color:var(--text-muted);font-weight:500;margin-left:auto;}
+.tabs-wrap{display:flex;gap:6px;overflow-x:auto;padding:12px 56px;scrollbar-width:none;}
+.tabs-wrap::-webkit-scrollbar{display:none;}
+.tab{white-space:nowrap;padding:7px 18px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--border);background:white;color:var(--text-muted);transition:all .2s;font-family:'DM Sans',sans-serif;}
+.tab:hover{border-color:var(--brand);color:var(--brand);}
+.tab.active{background:var(--brand);color:white;border-color:var(--brand);}
 
-/* -- CATALOG GRID -- */
-.catalog-sec{padding:40px 0 72px;}
-.catalog-inner{max-width:1200px;margin:0 auto;padding:0 56px;}
-.cat-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;}
-.cat-title{font-family:var(--serif);font-size:clamp(26px,3vw,38px);font-weight:700;color:var(--fg);}
-.cat-title em{font-style:italic;color:var(--brand);}
-.cat-sub{color:var(--text-muted);font-size:14px;margin-top:4px;}
+/* CATALOG BODY */
+.menu-body{max-width:1200px;margin:0 auto;padding:48px 40px;}
+.category{margin-bottom:56px;}
+.cat-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:16px;border-bottom:1.5px solid var(--border);}
+.cat-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--brand),var(--brand-dark));border-radius:14px;display:grid;place-items:center;font-size:20px;flex-shrink:0;box-shadow:var(--shadow-sm);}
+.cat-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--fg);}
+.cat-badge{background:var(--brand-light);color:var(--brand);padding:3px 12px;border-radius:50px;font-size:12px;font-weight:600;}
 
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.pc{background:var(--surface);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);display:flex;flex-direction:column;transition:all .3s var(--ease);opacity:0;transform:translateY(20px);}
-.pc.visible{opacity:1;transform:translateY(0);}
-.pc:hover{border-color:var(--brand);box-shadow:var(--sh-md);transform:translateY(-6px);}
-.pc-img{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--muted);}
-.pc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
-.pc:hover .pc-img img{transform:scale(1.08);}
-.pc-overlay{position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(26,10,8,.65));opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:16px;}
-.pc:hover .pc-overlay{opacity:1;}
-.quick-wa{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:#25D366;color:#fff;padding:10px;border-radius:var(--r-sm);font-size:12.5px;font-weight:600;text-decoration:none;}
-.quick-wa:hover{background:#1EB858;}
-.pc-badge{position:absolute;top:12px;left:12px;}
-.badge{display:inline-block;padding:4px 12px;border-radius:50px;font-size:10px;font-weight:700;letter-spacing:.3px;}
-.b-new{background:#ECFDF5;color:#065F46;}
-.b-popular{background:#FFFBEB;color:#92400E;}
-.b-bridal{background:#FDF0EE;color:#C0392B;}
-.b-festive{background:#E0F2FE;color:#0369A1;}
-.b-haldi{background:#FEF9C3;color:#A16207;}
-.pc-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;}
-.pc-name{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--fg);margin-bottom:4px;line-height:1.3;}
-.pc-desc{font-size:12px;color:var(--text-muted);line-height:1.65;flex:1;margin-bottom:12px;}
-.pc-price{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--brand);margin-bottom:12px;}
-.pc-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:#25D366;color:#fff;padding:10px;border-radius:var(--r-sm);font-size:12.5px;font-weight:600;transition:background .2s;text-decoration:none;}
-.pc-btn:hover{background:#1EB858;}
-.pc-btn svg{width:14px;height:14px;flex-shrink:0;}
+/* ITEM GRID */
+.items-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.item{background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);transition:all .25s;cursor:pointer;position:relative;display:flex;flex-direction:column;}
+.item:hover{border-color:var(--brand);box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.item-img-wrap{width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--muted);}
+.item-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.item:hover .item-img-wrap img{transform:scale(1.06);}
+.item-content{flex:1;padding:16px;display:flex;flex-direction:column;}
+.item-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:6px;}
+.tag{display:inline-block;padding:2px 8px;border-radius:50px;font-size:10px;font-weight:700;letter-spacing:.3px;}
+.tag-new{background:#ECFDF5;color:#065F46;}
+.tag-pop{background:#FFFBEB;color:#92400E;}
+.tag-best{background:#EFF6FF;color:#1D4ED8;}
+.item-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:700;color:var(--fg);margin-bottom:4px;line-height:1.3;}
+.item-desc{font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:14px;flex:1;}
+.item-bottom{display:flex;}
+.add-btn{width:100%;background:#16A34A;color:white;border:1.5px solid #16A34A;padding:8px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;}
+.add-btn:hover{background:#15803D;border-color:#15803D;}
 
-/* -- NO RESULTS -- */
-.no-results{text-align:center;padding:80px 20px;display:none;}
-.no-results.show{display:block;}
-.no-results h3{font-family:var(--serif);font-size:24px;color:var(--fg);margin-bottom:8px;}
-.no-results p{color:var(--text-muted);font-size:14px;margin-bottom:20px;}
+/* FAB */
+.fab{position:fixed;right:28px;bottom:28px;width:52px;height:52px;background:var(--brand);color:white;border-radius:50%;border:none;font-size:26px;cursor:pointer;box-shadow:0 8px 24px rgba(230,57,70,0.4);z-index:997;display:grid;place-items:center;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.fab:hover{transform:scale(1.08);background:var(--brand-dark);}
 
-/* -- CTA SECTION -- */
-.cta-sec{background:linear-gradient(135deg,var(--fg) 0%,#3A0E0A 55%,#1A0A08 100%);color:#fff;padding:80px 0;position:relative;overflow:hidden;}
-.cta-sec::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 8% 55%,rgba(192,57,43,.2) 0%,transparent 55%),radial-gradient(circle at 90% 20%,rgba(212,160,23,.1) 0%,transparent 45%);}
-.cta-inner{max-width:1200px;margin:0 auto;padding:0 56px;position:relative;z-index:1;text-align:center;}
-.cta-tag{display:inline-block;background:rgba(192,57,43,.22);border:1px solid rgba(192,57,43,.35);color:#FCA5A5;padding:3px 14px;border-radius:50px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
-.cta-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.1;margin-bottom:12px;}
-.cta-h2 em{font-style:italic;color:var(--gold);}
-.cta-sub{color:rgba(255,255,255,.6);font-size:15px;line-height:1.75;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;}
-.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.c-btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:var(--r-md);font-size:15px;font-weight:700;min-height:50px;transition:all .22s var(--ease);text-decoration:none;}
-.c-btn svg{width:19px;height:19px;flex-shrink:0;}
-.c-call{background:var(--brand);color:#fff;box-shadow:0 4px 16px rgba(192,57,43,.35);}
-.c-call:hover{background:var(--brand-dk);transform:translateY(-2px);}
-.c-wa{background:#25D366;color:#fff;box-shadow:0 4px 16px rgba(37,211,102,.32);}
-.c-wa:hover{background:#1EB858;transform:translateY(-2px);}
+/* MODAL */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+.overlay.open{display:flex;}
+.modal{background:white;border-radius:24px;padding:36px;width:500px;max-width:94vw;box-shadow:0 30px 80px rgba(0,0,0,0.2);}
+.modal-head{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;margin-bottom:24px;color:var(--fg);}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--fg);}
+.field input,.field select{width:100%;border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:11px 14px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--fg);outline:none;background:var(--bg);transition:border .2s;}
+.field input:focus,.field select:focus{border-color:var(--brand);background:white;}
+.modal-actions{display:flex;gap:10px;margin-top:24px;}
+.btn-cancel{background:var(--muted);color:var(--fg);padding:12px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-save{flex:1;background:var(--brand);color:white;padding:12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s;}
+.btn-save:hover{background:var(--brand-dark);}
 
-/* -- FOOTER -- */
-footer{background:#0F0402;color:rgba(255,255,255,.45);padding:48px 56px 22px;border-top:1px solid rgba(255,255,255,.05);}
-.ft-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:36px;}
-.ft-brand{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold);margin-bottom:12px;}
-.ft-desc{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:20px;max-width:280px;}
-.ft-social{display:flex;gap:12px;}
-.ft-social a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7);transition:all .2s;text-decoration:none;}
-.ft-social a:hover{border-color:var(--brand);background:var(--brand);color:#fff;transform:translateY(-3px);}
-.ft-social a svg{width:20px;height:20px;}
-.ft-col h4{font-size:13px;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;}
-.ft-col a{display:block;font-size:13.5px;color:rgba(255,255,255,.5);padding:6px 0;transition:color .15s;text-decoration:none;}
-.ft-col a:hover{color:var(--gold);}
-.ft-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);}
-.ft-copy{font-size:12.5px;}
-.ft-links{display:flex;gap:20px;}
-.ft-links a{font-size:12.5px;color:rgba(255,255,255,.45);transition:color .15s;text-decoration:none;}
-.ft-links a:hover{color:var(--gold);}
+/* TOAST */
+.toast{position:fixed;top:80px;right:24px;background:#2B0A0A;color:white;padding:12px 20px;border-radius:var(--radius-sm);font-size:14px;font-weight:500;z-index:9999;opacity:0;transform:translateY(-8px);transition:all .3s;pointer-events:none;}
+.toast.show{opacity:1;transform:translateY(0);}
 
-/* -- FLOATING WHATSAPP -- */
-.fab-wa{position:fixed;bottom:24px;right:24px;z-index:2000;width:56px;height:56px;background:#25D366;border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:all .2s;text-decoration:none;}
-.fab-wa:hover{transform:scale(1.08);background:#1EB858;}
-.fab-wa svg{width:26px;height:26px;}
+/* EMPTY */
+.empty{text-align:center;padding:60px 20px;color:var(--text-muted);}
+.empty-icon{font-size:48px;margin-bottom:12px;}
 
-/* -- RESPONSIVE -- */
-@media(max-width:1024px){
-  .nav-top,.filter-inner,.catalog-inner,.cta-inner,.ft-inner{padding-left:32px;padding-right:32px;}
-  footer{padding-left:32px;padding-right:32px;}
-  .prod-grid{grid-template-columns:repeat(3,1fr);}
-  .ft-inner{grid-template-columns:1fr 1fr;gap:32px;}
-}
+/* RESPONSIVE */
 @media(max-width:768px){
-  .ann-bar{height:28px;font-size:11px;}
-  .nav{top:28px;}
-  .nav-top{padding:0 18px;height:48px;}
-  .back-link span{display:none;}
-  .back-link{padding:7px 12px;}
-  .hero{min-height:340px;padding-top:76px;}
-  .hero-inner{padding:40px 18px;}
-  .filter-bar{top:76px;padding:14px 0;}
-  .filter-inner{padding:0 18px;}
-  .search-box{min-width:100%;}
-  .filter-tabs{width:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;}
-  .filter-tabs::-webkit-scrollbar{display:none;}
-  .ftab{white-space:nowrap;}
-  .result-count{width:100%;text-align:right;margin-top:4px;}
-  .catalog-sec{padding:24px 0 48px;}
-  .catalog-inner{padding:0 18px;}
-  .prod-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
-  .pc-body{padding:12px 14px 14px;}
-  .pc-name{font-size:14px;}
-  .pc-price{font-size:16px;}
-  .cta-sec{padding:56px 0;}
-  .cta-inner{padding:0 18px;}
-  footer{padding:36px 18px 18px;}
-  .ft-inner{grid-template-columns:1fr;gap:28px;}
-  .ft-bottom{flex-direction:column;gap:10px;text-align:center;}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}
+nav{padding:0 18px;}
+.hero{padding:90px 20px 44px;}
+.hero h1{font-size:36px;}
+.sticky-bar .search-wrap{padding:12px 18px 0;}
+.tabs-wrap{padding:10px 18px;}
+.menu-body{padding:36px 16px 100px;}
+.items-grid{grid-template-columns:repeat(2,1fr);}
+.fab{right:18px;bottom:24px;}
 }
 </style>
-<base target="_blank">
 </head>
 <body>
 
-<!-- ANNOUNCEMENT BAR -->
-<div class="ann-bar">
-  <div class="ann-track">
-    <span>✨ New arrivals added daily</span>
-    <span>💬 Order on WhatsApp: +91 9998148511</span>
-    <span>📍 Dindoli, Surat, Gujarat</span>
-    <span>🛍️ Sarees · Lehenga · Suits · Kurtis</span>
-    <span>⭐ 4.9 Star Rated by 500+ Customers</span>
-    <span>✨ New arrivals added daily</span>
-    <span>💬 Order on WhatsApp: +91 9998148511</span>
-    <span>📍 Dindoli, Surat, Gujarat</span>
-    <span>🛍️ Sarees · Lehenga · Suits · Kurtis</span>
-    <span>⭐ 4.9 Star Rated by 500+ Customers</span>
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo">👗</div>
+    <div class="nav-name">Shuhaagan <em>Sarees</em></div>
   </div>
-</div>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-top">
-    <a href="https://rajyagnik504.github.io/shuhaagan-sarees/" class="nav-brand">
-      <div class="nav-logo"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.48.18%20logo.jpeg" alt="Shuhaagan Sarees logo"></div>
-      <div class="nav-name">Shuhaagan <em>Sarees</em></div>
-    </a>
-    <div class="nav-actions">
-      <a href="tel:9998148511" class="nav-action">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        +91 9998148511
-      </a>
-      <a href="https://wa.me/919998148511?text=Hi! I would like to know about your saree collection." class="wa-pill" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        WhatsApp
-      </a>
-      <a href="https://rajyagnik504.github.io/shuhaagan-sarees/" class="back-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        <span>Back to Website</span>
-      </a>
-    </div>
-  </div>
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Website
+  </a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<div class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">⭐ Surat's Favourite Saree Shop</div>
-    <h1>Our <em>Full Catalog</em></h1>
-    <p class="hero-desc">Browse our complete collection of 23+ stunning Sarees, Lehengas, Suits and Kurtis. New designs added daily — message us on WhatsApp to order!</p>
+    <div class="hero-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Surat's Favourite Saree Shop
+    </div>
+    <h1>Our <em>Full</em> Catalog</h1>
+    <p class="hero-sub">Sarees, Lehenga, Suits, Kurtis and more — new designs added daily. Message us on WhatsApp to order!</p>
     <div class="hero-tags">
       <span class="hero-tag">✨ New Arrivals Daily</span>
       <span class="hero-tag">💬 Order on WhatsApp</span>
       <span class="hero-tag">📍 Surat, Gujarat</span>
     </div>
   </div>
-</section>
+</div>
 
-<!-- SEARCH & FILTER -->
-<div class="filter-bar">
-  <div class="filter-inner">
+<div class="sticky-bar">
+  <div class="search-wrap">
     <div class="search-box">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" id="searchInput" placeholder="Search sarees, lehenga, suits..." autocomplete="off">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A7070" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search sarees, lehenga, suits...">
     </div>
-    <div class="filter-tabs">
-      <button class="ftab active" data-filter="all">All<span class="count">23</span></button>
-      <button class="ftab" data-filter="sarees">🥻 Sarees<span class="count">18</span></button>
-      <button class="ftab" data-filter="lehenga">👰 Lehenga<span class="count">3</span></button>
-      <button class="ftab" data-filter="suits">🧵 Suits<span class="count">1</span></button>
-      <button class="ftab" data-filter="kurtis">👚 Kurtis<span class="count">1</span></button>
-    </div>
-    <div class="result-count" id="resultCount">Showing 23 products</div>
+  </div>
+  <div class="tabs-wrap" id="tabsWrap">
+    <button class="tab active" data-target="sarees">🥻 Sarees</button>
+    <button class="tab" data-target="lehenga">👰 Lehenga</button>
+    <button class="tab" data-target="suits">🧵 Suits</button>
+    <button class="tab" data-target="kurtis">👚 Kurtis</button>
   </div>
 </div>
 
-<!-- CATALOG -->
-<section class="catalog-sec">
-  <div class="catalog-inner">
-    <div class="cat-header">
-      <div>
-        <h2 class="cat-title">All <em>Products</em></h2>
-        <p class="cat-sub">Handpicked designs from Surat, Gujarat</p>
-      </div>
+<div class="menu-body" id="menuBody">
+
+<div class="category" id="sarees">
+<div class="cat-header"><div class="cat-icon">🥻</div><div class="cat-title">Sarees</div><span class="cat-badge">4 items</span></div>
+<div class="items-grid">
+<div class="item" data-name="Red Embroidered Saree"><div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.24%20saree1.jpeg" alt="Red Embroidered Saree" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div><div class="item-name">Red Embroidered Saree</div><div class="item-desc">Rich red saree with intricate golden booti embroidery — perfect for weddings and festive occasions.</div><div class="item-bottom"><a class="add-btn" href="#">Order on WhatsApp</a></div></div></div>
+<div class="item" data-name="Teal Shimmer Saree"><div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Teal Shimmer Saree" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-pop">Popular</span></div><div class="item-name">Teal Shimmer Saree</div><div class="item-desc">Elegant teal-toned saree with sparkling stone-work border — perfect for parties and receptions.</div><div class="item-bottom"><a class="add-btn" href="#">Order on WhatsApp</a></div></div></div>
+<div class="item" data-name="Pink Sequin Dupatta Set"><div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Pink Sequin Dupatta Set" loading="lazy"></div><div class="item-content"><div class="item-tags"></div><div class="item-name">Pink Sequin Dupatta Set</div><div class="item-desc">Soft pink net dupatta with delicate sequin and stone detailing — light and graceful.</div><div class="item-bottom"><a class="add-btn" href="#">Order on WhatsApp</a></div></div></div>
+<div class="item" data-name="Pastel Floral Embroidered Set"><div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree4.jpeg" alt="Pastel Floral Embroidered Set" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div><div class="item-name">Pastel Floral Embroidered Set</div><div class="item-desc">Beautiful pastel pink fabric with delicate floral embroidery and beadwork — elegant and unique.</div><div class="item-bottom"><a class="add-btn" href="#">Order on WhatsApp</a></div></div></div>
+</div></div>
+
+<div class="category" id="lehenga">
+<div class="cat-header"><div class="cat-icon">👰</div><div class="cat-title">Lehenga</div><span class="cat-badge">Coming Soon</span></div>
+<div class="items-grid">
+<div class="item" data-name="Bridal Lehenga Collection"><div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.24%20saree1.jpeg" alt="Bridal Lehenga Collection" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-best">Ask Us</span></div><div class="item-name">Bridal Lehenga Collection</div><div class="item-desc">Message us on WhatsApp for our full bridal lehenga catalog with prices and designs.</div><div class="item-bottom"><a class="add-btn" href="#">Order on WhatsApp</a></div></div></div>
+</div></div>
+
+<div class="category" id="suits">
+<div class="cat-header"><div class="cat-icon">🧵</div><div class="cat-title">Suits</div><span class="cat-badge">Coming Soon</span></div>
+<div class="items-grid">
+<div class="item" data-name="Designer Suits Collection"><div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Designer Suits Collection" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-best">Ask Us</span></div><div class="item-name">Designer Suits Collection</div><div class="item-desc">Message us on WhatsApp for daily wear and festive suit designs with prices.</div><div class="item-bottom"><a class="add-btn" href="#">Order on WhatsApp</a></div></div></div>
+</div></div>
+
+<div class="category" id="kurtis">
+<div class="cat-header"><div class="cat-icon">👚</div><div class="cat-title">Kurtis</div><span class="cat-badge">Coming Soon</span></div>
+<div class="items-grid">
+<div class="item" data-name="Casual & Office Kurtis"><div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Casual and Office Kurtis" loading="lazy"></div><div class="item-content"><div class="item-tags"><span class="tag tag-best">Ask Us</span></div><div class="item-name">Casual & Office Kurtis</div><div class="item-desc">Message us on WhatsApp for our latest kurti collection — comfortable and stylish.</div><div class="item-bottom"><a class="add-btn" href="#">Order on WhatsApp</a></div></div></div>
+</div></div>
+
+<div class="empty" id="emptyState" style="display:none">
+  <div class="empty-icon">🔍</div>
+  <div style="font-size:18px;font-weight:600;margin-bottom:8px;">No items found</div>
+  <div>Try searching something else</div>
+</div>
+
+</div>
+
+<!-- FAB -->
+<button class="fab" id="fabAdd" title="Add new item">+</button>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-head">Add New Catalog Item</div>
+    <div class="field"><label>Item Name *</label><input type="text" id="fName" placeholder="e.g. Blue Silk Saree"></div>
+    <div class="field"><label>Description</label><input type="text" id="fDesc" placeholder="Short description of the item"></div>
+    <div class="field"><label>Category</label>
+      <select id="fCat">
+        <option>Sarees</option><option>Lehenga</option><option>Suits</option><option>Kurtis</option>
+      </select>
     </div>
-    <div class="prod-grid" id="productGrid">
-
-      <article class="pc" data-cat="sarees" data-name="red embroidered saree" data-desc="rich red saree with intricate golden booti embroidery — perfect for weddings and festive occasions.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.24%20saree1.jpeg" alt="Red Embroidered Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Embroidered%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-new">New</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Red Embroidered Saree</div>
-          <div class="pc-desc">Rich red saree with intricate golden booti embroidery — perfect for weddings and festive occasions.</div>
-          <div class="pc-price">₹2,499</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Embroidered%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="teal shimmer saree" data-desc="elegant teal-toned saree with sparkling stone-work border — perfect for parties and receptions.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Teal Shimmer Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Teal%20Shimmer%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-popular">Popular</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Teal Shimmer Saree</div>
-          <div class="pc-desc">Elegant teal-toned saree with sparkling stone-work border — perfect for parties and receptions.</div>
-          <div class="pc-price">₹2,199</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Teal%20Shimmer%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="suits" data-name="pink sequin dupatta set" data-desc="soft pink net dupatta with delicate sequin and stone detailing — light and graceful.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Pink Sequin Dupatta Set" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Sequin%20Dupatta%20Set." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Pink Sequin Dupatta Set</div>
-          <div class="pc-desc">Soft pink net dupatta with delicate sequin and stone detailing — light and graceful.</div>
-          <div class="pc-price">₹1,899</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Sequin%20Dupatta%20Set." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="pastel floral embroidered set" data-desc="beautiful pastel pink fabric with delicate floral embroidery and beadwork — elegant and unique.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree4.jpeg" alt="Pastel Floral Embroidered Set" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pastel%20Floral%20Embroidered%20Set." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-new">New</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Pastel Floral Embroidered Set</div>
-          <div class="pc-desc">Beautiful pastel pink fabric with delicate floral embroidery and beadwork — elegant and unique.</div>
-          <div class="pc-price">₹2,799</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pastel%20Floral%20Embroidered%20Set." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="royal maroon bandhani" data-desc="traditional bandhani work in rich maroon with golden zari border — a timeless classic.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.27%20saree5.jpeg" alt="Royal Maroon Bandhani" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Royal%20Maroon%20Bandhani." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Royal Maroon Bandhani</div>
-          <div class="pc-desc">Traditional Bandhani work in rich maroon with golden zari border — a timeless classic.</div>
-          <div class="pc-price">₹3,199</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Royal%20Maroon%20Bandhani." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="crimson red bridal saree" data-desc="stunning crimson red with heavy embroidery and peacock motifs — ideal for bridal wear.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.28%20saree6.jpeg" alt="Crimson Red Bridal Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Crimson%20Red%20Bridal%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-bridal">Bridal</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Crimson Red Bridal Saree</div>
-          <div class="pc-desc">Stunning crimson red with heavy embroidery and peacock motifs — ideal for bridal wear.</div>
-          <div class="pc-price">₹4,499</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Crimson%20Red%20Bridal%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="golden thread work saree" data-desc="exquisite golden thread work on cream base — elegant for any special occasion.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.29%20saree7.jpeg" alt="Golden Thread Work Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Golden%20Thread%20Work%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Golden Thread Work Saree</div>
-          <div class="pc-desc">Exquisite golden thread work on cream base — elegant for any special occasion.</div>
-          <div class="pc-price">₹2,899</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Golden%20Thread%20Work%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="deep red festive saree" data-desc="deep red with intricate mirror work and heavy border — perfect for navratri and festivals.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20saree8.jpeg" alt="Deep Red Festive Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Deep%20Red%20Festive%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-festive">Festive</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Deep Red Festive Saree</div>
-          <div class="pc-desc">Deep red with intricate mirror work and heavy border — perfect for Navratri and festivals.</div>
-          <div class="pc-price">₹2,599</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Deep%20Red%20Festive%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="magenta peacock saree" data-desc="vibrant magenta with peacock embroidery and heavy pallu — a showstopper piece.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.31%20saree9.jpeg" alt="Magenta Peacock Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Magenta%20Peacock%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-popular">Popular</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Magenta Peacock Saree</div>
-          <div class="pc-desc">Vibrant magenta with peacock embroidery and heavy pallu — a showstopper piece.</div>
-          <div class="pc-price">₹3,499</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Magenta%20Peacock%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="ruby red mirror work" data-desc="ruby red with traditional mirror work and bead detailing — authentic gujarati craft.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.24%20saree10jpeg" alt="Ruby Red Mirror Work" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Ruby%20Red%20Mirror%20Work." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Ruby Red Mirror Work</div>
-          <div class="pc-desc">Ruby red with traditional mirror work and bead detailing — authentic Gujarati craft.</div>
-          <div class="pc-price">₹2,299</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Ruby%20Red%20Mirror%20Work." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="lehenga" data-name="orange bandhani lehenga" data-desc="bright orange bandhani lehenga with heavy dupatta — perfect for haldi and sangeet.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.25%20saree11.jpeg" alt="Orange Bandhani Lehenga" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Orange%20Bandhani%20Lehenga." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-new">New</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Orange Bandhani Lehenga</div>
-          <div class="pc-desc">Bright orange Bandhani lehenga with heavy dupatta — perfect for haldi and sangeet.</div>
-          <div class="pc-price">₹3,999</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Orange%20Bandhani%20Lehenga." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="pink gota patti saree" data-desc="soft pink with gota patti work and heavy border — elegant and lightweight.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.25%20saree12.jpeg" alt="Pink Gota Patti Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Gota%20Patti%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Pink Gota Patti Saree</div>
-          <div class="pc-desc">Soft pink with Gota Patti work and heavy border — elegant and lightweight.</div>
-          <div class="pc-price">₹2,149</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Gota%20Patti%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="lehenga" data-name="green festive lehenga" data-desc="rich green lehenga with golden embroidery — perfect for mehndi and festive events.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.26%20saree13.jpeg" alt="Green Festive Lehenga" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Green%20Festive%20Lehenga." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-festive">Festive</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Green Festive Lehenga</div>
-          <div class="pc-desc">Rich green lehenga with golden embroidery — perfect for mehndi and festive events.</div>
-          <div class="pc-price">₹4,199</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Green%20Festive%20Lehenga." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="lehenga" data-name="red bridal lehenga set" data-desc="heavy red bridal lehenga with intricate zari and stone work — complete wedding look.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.26%20saree14.jpeg" alt="Red Bridal Lehenga Set" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Bridal%20Lehenga%20Set." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-bridal">Bridal</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Red Bridal Lehenga Set</div>
-          <div class="pc-desc">Heavy red bridal lehenga with intricate zari and stone work — complete wedding look.</div>
-          <div class="pc-price">₹5,999</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Bridal%20Lehenga%20Set." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="kurtis" data-name="peach embroidered kurti" data-desc="peach kurti with delicate embroidery and lace detailing — comfortable daily wear.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.27%20saree15.jpeg" alt="Peach Embroidered Kurti" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Peach%20Embroidered%20Kurti." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Peach Embroidered Kurti</div>
-          <div class="pc-desc">Peach kurti with delicate embroidery and lace detailing — comfortable daily wear.</div>
-          <div class="pc-price">₹1,299</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Peach%20Embroidered%20Kurti." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="yellow haldi saree" data-desc="bright yellow saree with light embroidery — perfect for haldi ceremonies.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.27%20saree16.jpeg" alt="Yellow Haldi Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Yellow%20Haldi%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-haldi">Haldi</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Yellow Haldi Saree</div>
-          <div class="pc-desc">Bright yellow saree with light embroidery — perfect for haldi ceremonies.</div>
-          <div class="pc-price">₹1,799</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Yellow%20Haldi%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="coral pink party wear" data-desc="coral pink with sequin work and stylish border — great for parties and receptions.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.25%20AM%20saree17.jpeg" alt="Coral Pink Party Wear" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Coral%20Pink%20Party%20Wear." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Coral Pink Party Wear</div>
-          <div class="pc-desc">Coral pink with sequin work and stylish border — great for parties and receptions.</div>
-          <div class="pc-price">₹2,449</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Coral%20Pink%20Party%20Wear." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="wine red evening saree" data-desc="deep wine red with subtle shimmer and elegant border — perfect evening wear.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.24%20saree18.jpeg" alt="Wine Red Evening Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Wine%20Red%20Evening%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Wine Red Evening Saree</div>
-          <div class="pc-desc">Deep wine red with subtle shimmer and elegant border — perfect evening wear.</div>
-          <div class="pc-price">₹2,699</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Wine%20Red%20Evening%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="light pink daily wear" data-desc="light pink with minimal work — comfortable and elegant for daily wear.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.24%20AM%20saree19.jpeg" alt="Light Pink Daily Wear" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Light%20Pink%20Daily%20Wear." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Light Pink Daily Wear</div>
-          <div class="pc-desc">Light pink with minimal work — comfortable and elegant for daily wear.</div>
-          <div class="pc-price">₹1,499</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Light%20Pink%20Daily%20Wear." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="maroon zari border saree" data-desc="maroon with heavy golden zari border and pallu — traditional and grand.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.31%20saree20.jpeg" alt="Maroon Zari Border Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Maroon%20Zari%20Border%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Maroon Zari Border Saree</div>
-          <div class="pc-desc">Maroon with heavy golden zari border and pallu — traditional and grand.</div>
-          <div class="pc-price">₹3,299</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Maroon%20Zari%20Border%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="multi-color bandhani" data-desc="vibrant multi-color bandhani with heavy border — authentic surat craftsmanship.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20saree21.jpeg" alt="Multi-Color Bandhani" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Multi-Color%20Bandhani." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Multi-Color Bandhani</div>
-          <div class="pc-desc">Vibrant multi-color Bandhani with heavy border — authentic Surat craftsmanship.</div>
-          <div class="pc-price">₹2,899</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Multi-Color%20Bandhani." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="red-gold wedding saree" data-desc="red and gold combination with heavy embroidery — the perfect wedding choice.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20AM%20saree22.jpeg" alt="Red-Gold Wedding Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red-Gold%20Wedding%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-          <div class="pc-badge"><span class="badge b-bridal">Bridal</span></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Red-Gold Wedding Saree</div>
-          <div class="pc-desc">Red and gold combination with heavy embroidery — the perfect wedding choice.</div>
-          <div class="pc-price">₹4,799</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red-Gold%20Wedding%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-      <article class="pc" data-cat="sarees" data-name="pink floral daily saree" data-desc="pink with floral print and light border — comfortable and beautiful for daily wear.">
-        <div class="pc-img">
-          <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20AM%20saree23.jpeg" alt="Pink Floral Daily Saree" width="400" height="530" loading="lazy">
-          <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Floral%20Daily%20Saree." target="_blank">💬 Quick Enquiry</a></div>
-        </div>
-        <div class="pc-body">
-          <div class="pc-name">Pink Floral Daily Saree</div>
-          <div class="pc-desc">Pink with floral print and light border — comfortable and beautiful for daily wear.</div>
-          <div class="pc-price">₹1,599</div>
-          <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Floral%20Daily%20Saree." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Order on WhatsApp</a>
-        </div>
-      </article>
-
-    </div>
-    <div class="no-results" id="noResults">
-      <h3>No products found</h3>
-      <p>Try a different search term or browse all categories.</p>
-      <button class="ftab active" onclick="resetFilters()" style="margin-top:8px;">View All Products</button>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="btnCancel">Cancel</button>
+      <button class="btn-save" id="btnSave">Add to Catalog ✓</button>
     </div>
   </div>
-</section>
+</div>
 
-<!-- CTA SECTION -->
-<section class="cta-sec">
-  <div class="cta-inner">
-    <div class="cta-tag">Visit Us</div>
-    <h2 class="cta-h2">Shop with <em>Shuhaagan</em> Today</h2>
-    <p class="cta-sub">New arrivals added daily! Message us on WhatsApp for the latest sarees, lehengas, suits and kurtis — we'll send you photos and prices instantly.</p>
-    <div class="cta-btns">
-      <a href="tel:9998148511" class="c-btn c-call">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        Call: +91 9998148511
-      </a>
-      <a href="https://wa.me/919998148511" class="c-btn c-wa" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        WhatsApp: +91 9998148511
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="ft-inner">
-    <div>
-      <div class="ft-brand">Shuhaagan Sarees</div>
-      <p class="ft-desc">Beautiful Sarees, Lehengas, Suits & Kurtis from Surat, Gujarat. New designs added daily. Order on WhatsApp for quick delivery.</p>
-      <div class="ft-social">
-        <a href="https://www.instagram.com/shuhaagan_sarees?igsh=MXRycnN1a3k4ZHh6eA%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@Shuhaagan_Sarees" target="_blank" rel="noopener" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5C1.6 4.3.8 5.1.5 6.2 0 8.2 0 12 0 12s0 3.8.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 2 .5 9.3.5 9.3.5s7.3 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-2 .5-5.8.5-5.8s0-3.8-.5-5.8zM9.5 15.5V8.5l6.2 3.5-6.2 3.5z"/></svg>
-        </a>
-        <a href="https://wa.me/919998148511" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="ft-col">
-      <h4>Collections</h4>
-      <a href="#" onclick="filterCat('sarees');return false;">Sarees</a>
-      <a href="#" onclick="filterCat('lehenga');return false;">Lehenga</a>
-      <a href="#" onclick="filterCat('suits');return false;">Suits</a>
-      <a href="#" onclick="filterCat('kurtis');return false;">Kurtis</a>
-    </div>
-    <div class="ft-col">
-      <h4>Occasions</h4>
-      <a href="https://wa.me/919998148511?text=Hi! Please show me Bridal wear." target="_blank">Bridal</a>
-      <a href="https://wa.me/919998148511?text=Hi! Please show me Festive wear." target="_blank">Festive</a>
-      <a href="https://wa.me/919998148511?text=Hi! Please show me Party wear." target="_blank">Party Wear</a>
-      <a href="https://wa.me/919998148511?text=Hi! Please show me Daily wear." target="_blank">Daily Wear</a>
-    </div>
-    <div class="ft-col">
-      <h4>Contact</h4>
-      <a href="tel:9998148511">+91 9998148511</a>
-      <a href="https://wa.me/919998148511" target="_blank">WhatsApp</a>
-      <a href="https://www.instagram.com/shuhaagan_sarees?igsh=MXRycnN1a3k4ZHh6eA%3D%3D" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@Shuhaagan_Sarees" target="_blank">YouTube</a>
-    </div>
-  </div>
-  <div class="ft-bottom">
-    <div class="ft-copy">&copy; 2026 Shuhaagan Sarees. All rights reserved. | Dindoli, Surat, Gujarat</div>
-    <div class="ft-links">
-      <a href="https://rajyagnik504.github.io/shuhaagan-sarees/">Home</a>
-      <a href="catalog.html">Catalog</a>
-    </div>
-  </div>
-</footer>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/919998148511" class="fab-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-</a>
+<div class="toast" id="toast"></div>
 
 <script>
 (function(){
-  var grid = document.getElementById('productGrid');
-  var cards = Array.from(grid.querySelectorAll('.pc'));
-  var searchInput = document.getElementById('searchInput');
-  var tabs = document.querySelectorAll('.ftab[data-filter]');
-  var resultCount = document.getElementById('resultCount');
-  var noResults = document.getElementById('noResults');
-  var currentFilter = 'all';
+  var phone = "9998148511";
 
-  function updateCount(n){
-    resultCount.textContent = 'Showing ' + n + ' product' + (n !== 1 ? 's' : '');
-  }
-
-  function filterProducts(){
-    var term = searchInput.value.toLowerCase().trim();
-    var visible = 0;
-    cards.forEach(function(card){
-      var cat = card.getAttribute('data-cat');
-      var name = card.getAttribute('data-name');
-      var desc = card.getAttribute('data-desc');
-      var matchCat = currentFilter === 'all' || cat === currentFilter;
-      var matchSearch = !term || name.indexOf(term) !== -1 || desc.indexOf(term) !== -1;
-      if(matchCat && matchSearch){
-        card.style.display = '';
-        visible++;
-        setTimeout(function(){ card.classList.add('visible'); }, visible * 40);
-      } else {
-        card.style.display = 'none';
-        card.classList.remove('visible');
-      }
-    });
-    updateCount(visible);
-    noResults.classList.toggle('show', visible === 0);
-  }
-
-  window.filterCat = function(cat){
-    currentFilter = cat;
-    tabs.forEach(function(t){
-      t.classList.toggle('active', t.getAttribute('data-filter') === cat);
-    });
-    // Scroll to grid
-    grid.scrollIntoView({behavior:'smooth',block:'start'});
-    filterProducts();
-  };
-
-  window.resetFilters = function(){
-    searchInput.value = '';
-    filterCat('all');
-  };
-
-  tabs.forEach(function(tab){
-    tab.addEventListener('click', function(){
-      filterCat(this.getAttribute('data-filter'));
-    });
+  document.querySelectorAll('.add-btn').forEach(function(btn){
+    var item = btn.closest('.item');
+    var n = item.dataset.name;
+    btn.href = 'https://wa.me/91' + phone + '?text=' + encodeURIComponent('Hi! I am interested in: ' + n + ' shown on your website catalog.');
   });
 
-  searchInput.addEventListener('input', filterProducts);
-
-  // Initial reveal animation
-  cards.forEach(function(card, i){
-    setTimeout(function(){ card.classList.add('visible'); }, i * 40);
-  });
-
-  // Scroll reveal for other elements
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-          io.unobserve(e.target);
-        }
+  // SEARCH
+  document.getElementById('searchInput').addEventListener('input', function(){
+    var q = this.value.toLowerCase().trim();
+    var anyVisible = false;
+    document.querySelectorAll('.category').forEach(function(cat){
+      var items = cat.querySelectorAll('.item');
+      var catVisible = false;
+      items.forEach(function(item){
+        var match = !q || item.dataset.name.toLowerCase().includes(q) || item.querySelector('.item-desc').textContent.toLowerCase().includes(q);
+        item.style.display = match ? '' : 'none';
+        if(match) catVisible = true;
       });
-    }, {threshold: .1, rootMargin: '0px 0px -30px 0px'});
-    document.querySelectorAll('.cta-inner, .ft-inner').forEach(function(el){
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(16px)';
-      el.style.transition = 'opacity .5s ease, transform .5s ease';
-      io.observe(el);
+      cat.style.display = catVisible ? '' : 'none';
+      if(catVisible) anyVisible = true;
     });
-  }
+    document.getElementById('emptyState').style.display = anyVisible ? 'none' : 'block';
+  });
 
-  // Handle URL hash for direct category links
-  if(window.location.hash){
-    var hash = window.location.hash.replace('#','');
-    if(['sarees','lehenga','suits','kurtis'].indexOf(hash) !== -1){
-      setTimeout(function(){ filterCat(hash); }, 300);
-    }
+  // TABS
+  document.getElementById('tabsWrap').addEventListener('click', function(e){
+    var tab = e.target.closest('.tab');
+    if(!tab) return;
+    document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+    tab.classList.add('active');
+    var target = document.getElementById(tab.dataset.target);
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  // FAB + MODAL
+  document.getElementById('fabAdd').addEventListener('click', function(){ document.getElementById('overlay').classList.add('open'); });
+  document.getElementById('btnCancel').addEventListener('click', function(){ document.getElementById('overlay').classList.remove('open'); });
+  document.getElementById('overlay').addEventListener('click', function(e){ if(e.target === this) this.classList.remove('open'); });
+
+  document.getElementById('btnSave').addEventListener('click', function(){
+    var n = document.getElementById('fName').value.trim();
+    var d = document.getElementById('fDesc').value.trim();
+    if(!n){ toast('Please enter an item name!'); return; }
+    var html = '<div class="item" data-name="' + n + '">' +
+      '<div class="item-img-wrap"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.24%20saree1.jpeg" alt="" loading="lazy"></div>' +
+      '<div class="item-content"><div class="item-tags"><span class="tag tag-new">New</span></div>' +
+      '<div class="item-name">' + n + '</div>' +
+      '<div class="item-desc">' + (d || 'Beautiful new design — message us for details.') + '</div>' +
+      '<div class="item-bottom"><a class="add-btn" href="https://wa.me/91' + phone + '?text=' + encodeURIComponent('Hi! I am interested in: ' + n) + '">Order on WhatsApp</a></div>' +
+      '</div></div>';
+    var grids = document.querySelectorAll('.items-grid');
+    grids[0].insertAdjacentHTML('beforeend', html);
+    document.getElementById('overlay').classList.remove('open');
+    document.getElementById('fName').value = '';
+    document.getElementById('fDesc').value = '';
+    toast('✓ ' + n + ' added to catalog!');
+  });
+
+  function toast(msg){
+    var t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 2500);
   }
 })();
 </script>
