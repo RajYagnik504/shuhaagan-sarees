@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Shuhaagan Sarees Full Catalog - 23+ Sarees, Lehengas, Suits & Kurtis from Surat, Gujarat. Order on WhatsApp.">
+<meta name="description" content="Shuhaagan Sarees Full Catalog - 22+ Sarees from Surat, Gujarat. Order on WhatsApp.">
 <title>Full Catalog | Shuhaagan Sarees - Surat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -59,12 +59,16 @@ button{font-family:var(--sans);cursor:pointer;border:none}
 .hero-deco-line{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,160,23,.3),transparent)}
 .hero-deco-line.top{top:88px}
 .hero-deco-line.bot{bottom:0}
-/* corner ornaments */
 .hero::after{content:'';position:absolute;top:96px;left:40px;width:60px;height:60px;border-top:2px solid rgba(212,160,23,.25);border-left:2px solid rgba(212,160,23,.25);pointer-events:none}
 .hero-inner{position:relative;z-index:2;text-align:center;padding:40px 20px 52px;max-width:760px;width:100%}
-/* Logo ring */
-.hero-logo-ring{width:96px;height:96px;border-radius:50%;overflow:hidden;border:3px solid rgba(212,160,23,.6);margin:0 auto 18px;box-shadow:0 0 0 7px rgba(212,160,23,.1),0 0 0 14px rgba(212,160,23,.05);animation:logoPulse 3s ease-in-out infinite}
-@keyframes logoPulse{0%,100%{box-shadow:0 0 0 7px rgba(212,160,23,.1),0 0 0 14px rgba(212,160,23,.05)}50%{box-shadow:0 0 0 10px rgba(212,160,23,.18),0 0 0 20px rgba(212,160,23,.07)}}
+
+/* Logo medallion - redesigned to look like a deliberate brand mark, not a placeholder */
+.hero-logo-medallion{position:relative;width:108px;height:108px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center}
+.hero-logo-medallion::before{content:'';position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 0deg,var(--gold),transparent,var(--gold),transparent,var(--gold));opacity:.35;animation:rotateRing 12s linear infinite}
+.hero-logo-medallion::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(212,160,23,.5)}
+@keyframes rotateRing{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.hero-logo-ring{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;border:3px solid rgba(212,160,23,.7);box-shadow:0 0 0 6px rgba(26,10,8,.9),0 8px 28px rgba(0,0,0,.45);animation:logoPulse 3s ease-in-out infinite;z-index:2}
+@keyframes logoPulse{0%,100%{box-shadow:0 0 0 6px rgba(26,10,8,.9),0 8px 28px rgba(0,0,0,.45),0 0 0 11px rgba(212,160,23,.08)}50%{box-shadow:0 0 0 6px rgba(26,10,8,.9),0 8px 28px rgba(0,0,0,.45),0 0 0 16px rgba(212,160,23,.16)}}
 .hero-logo-ring img{width:100%;height:100%;object-fit:cover}
 /* Decorative divider */
 .hero-divider{display:flex;align-items:center;gap:12px;justify-content:center;margin:0 auto 14px;max-width:320px}
@@ -104,11 +108,6 @@ button{font-family:var(--sans);cursor:pointer;border:none}
 .search-wrap input{width:100%;height:42px;padding:0 14px 0 38px;border:1.5px solid var(--border);border-radius:10px;font-size:13.5px;font-family:var(--sans);background:var(--muted);color:var(--fg);transition:all .2s;outline:none}
 .search-wrap input:focus{border-color:var(--brand);background:#fff;box-shadow:0 0 0 3px rgba(192,57,43,.08)}
 .search-wrap input::placeholder{color:var(--text-muted)}
-.filter-tabs{display:flex;gap:7px;flex-wrap:wrap}
-.ftab{padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;border:1.5px solid var(--border);background:#fff;color:var(--fg);cursor:pointer;transition:all .2s;white-space:nowrap}
-.ftab:hover{border-color:var(--brand);color:var(--brand)}
-.ftab.active{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 4px 12px rgba(192,57,43,.22)}
-.ftab .cnt{font-size:11px;opacity:.7;margin-left:3px}
 /* Price row */
 .price-row{display:flex;align-items:center;gap:7px;flex-wrap:wrap;width:100%;margin-top:4px}
 .price-lbl{font-size:12px;color:var(--text-muted);font-weight:600;margin-right:2px}
@@ -121,15 +120,6 @@ button{font-family:var(--sans);cursor:pointer;border:none}
 .sec-head{max-width:1200px;margin:0 auto;padding:36px 56px 0;display:flex;align-items:center;gap:16px}
 .sec-head-line{flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent)}
 .sec-head-txt{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
-
-/* COMING-SOON NOTICE BANNER */
-.cs-notice{max-width:1200px;margin:18px auto 0;padding:0 56px}
-.cs-notice-inner{background:linear-gradient(135deg,var(--brand-lt),var(--gold-lt));border:1px solid var(--border);border-radius:16px;padding:16px 22px;display:flex;align-items:center;gap:14px}
-.cs-notice-icon{font-size:26px;flex-shrink:0}
-.cs-notice-text{font-size:13.5px;color:var(--fg2);line-height:1.6}
-.cs-notice-text strong{color:var(--brand)}
-.cs-notice-wa{margin-left:auto;flex-shrink:0;display:flex;align-items:center;gap:6px;background:#25D366;color:#fff;padding:9px 18px;border-radius:50px;font-size:12.5px;font-weight:700;white-space:nowrap;transition:background .2s}
-.cs-notice-wa:hover{background:#1EB858}
 
 /* CATALOG GRID */
 .catalog-sec{padding:24px 0 72px}
@@ -151,7 +141,7 @@ button{font-family:var(--sans);cursor:pointer;border:none}
 .badge{display:inline-block;padding:3px 10px;border-radius:50px;font-size:10px;font-weight:700;letter-spacing:.3px}
 .b-new{background:#ECFDF5;color:#065F46}
 .b-popular{background:#FFFBEB;color:#92400E}
-.b-bridal{background:#FDF0EE;color:#C0392B}
+.b-bridal{background:#FDF0EE;color:#C03928}
 .b-festive{background:#E0F2FE;color:#0369A1}
 .b-haldi{background:#FEF9C3;color:#A16207}
 .pc-body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column}
@@ -160,19 +150,6 @@ button{font-family:var(--sans);cursor:pointer;border:none}
 .pc-price{font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:var(--brand);margin-bottom:10px}
 .pc-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:#25D366;color:#fff;padding:10px;border-radius:8px;font-size:12.5px;font-weight:600;transition:background .2s}
 .pc-btn:hover{background:#1EB858}
-
-/* COMING SOON CARDS */
-.coming-soon-card{border-style:dashed;border-color:rgba(192,57,43,.3);background:linear-gradient(135deg,#fff 0%,var(--brand-lt) 100%)}
-.coming-soon-card:hover{border-color:var(--brand);border-style:solid}
-.cs-img-wrap{position:relative;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,var(--brand-lt) 0%,var(--gold-lt) 100%);display:flex;align-items:center;justify-content:center}
-.cs-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:24px;text-align:center;width:100%;height:100%}
-.cs-icon{font-size:52px;line-height:1;animation:csFloat 3s ease-in-out infinite}
-@keyframes csFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.cs-soon-label{font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;color:var(--brand);letter-spacing:.5px}
-.cs-store-label{font-size:11px;color:var(--text-muted);font-weight:600;background:#fff;padding:4px 12px;border-radius:50px;border:1px solid var(--border)}
-.cs-price{font-size:13px;color:var(--text-muted);font-weight:600;background:var(--muted);padding:4px 12px;border-radius:50px;display:inline-block;margin-bottom:10px}
-.cs-wa-btn{background:var(--brand);color:#fff}
-.cs-wa-btn:hover{background:var(--brand-dk)}
 
 /* NO RESULTS */
 .no-results{text-align:center;padding:72px 20px;display:none}
@@ -214,7 +191,7 @@ button{font-family:var(--sans);cursor:pointer;border:none}
 
 /* FOOTER */
 footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
-.ft-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:28px}
+.ft-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:28px}
 .ft-brand-name{font-family:'Playfair Display',Georgia,serif;font-size:21px;font-weight:700;color:var(--gold);margin-bottom:10px}
 .ft-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:18px;max-width:260px}
 .ft-social{display:flex;gap:10px}
@@ -237,7 +214,7 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
-  .nav-top,.filter-inner,.catalog-inner,.cta-inner,.social-inner,.sec-head,.cs-notice{padding-left:32px;padding-right:32px}
+  .nav-top,.filter-inner,.catalog-inner,.cta-inner,.social-inner,.sec-head{padding-left:32px;padding-right:32px}
   footer{padding-left:32px;padding-right:32px}
   .prod-grid{grid-template-columns:repeat(3,1fr)}
   .ft-inner{grid-template-columns:1fr 1fr;gap:28px}
@@ -250,14 +227,12 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
   .back-btn{padding:7px 10px}
   .hero{padding-top:76px;min-height:auto}
   .hero-inner{padding:32px 18px 44px}
-  .hero-logo-ring{width:76px;height:76px}
+  .hero-logo-medallion{width:88px;height:88px}
   .filter-bar{top:76px}
   .filter-inner{padding:0 18px}
   .search-wrap{min-width:100%}
-  .filter-tabs{overflow-x:auto;scrollbar-width:none;padding-bottom:4px;width:100%}
-  .filter-tabs::-webkit-scrollbar{display:none}
   .res-count{width:100%}
-  .catalog-inner,.sec-head,.cs-notice{padding-left:18px;padding-right:18px}
+  .catalog-inner,.sec-head{padding-left:18px;padding-right:18px}
   .prod-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .social-inner,.cta-inner{padding:0 18px}
   footer{padding:36px 18px 18px}
@@ -265,8 +240,6 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
   .ft-bottom{flex-direction:column;gap:8px;text-align:center}
   .hero-social{gap:8px}
   .hs-btn{padding:9px 16px;font-size:12px}
-  .cs-notice-inner{flex-wrap:wrap}
-  .cs-notice-wa{margin-left:0}
 }
 @media(max-width:400px){
   .prod-grid{grid-template-columns:1fr}
@@ -276,7 +249,7 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
 }
 </style>
 </head><body>
-<div class="ann-bar"><div class="ann-track" data-marquee><span>New arrivals added daily</span><span>Order on WhatsApp: +91 9998148511</span><span>Dindoli, Surat, Gujarat</span><span>Sarees | Lehenga | Suits | Kurtis</span><span>4.9 Star Rated by 5000+ Customers</span></div></div>
+<div class="ann-bar"><div class="ann-track" data-marquee><span>New arrivals added daily</span><span>Order on WhatsApp: +91 9998148511</span><span>Dindoli, Surat, Gujarat</span><span>Pure Saree Collection</span><span>4.9 Star Rated by 5000+ Customers</span></div></div>
 <nav class="nav"><div class="nav-top">
 <a href="index.html" class="nav-brand"><div class="nav-logo"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.48.18%20logo.jpeg" alt="Shuhaagan Sarees logo" onerror="this.src='https://placehold.co/44x44/C0392B/white?text=S'"></div><div class="nav-name">Shuhaagan <em>Sarees</em></div></a>
 <div class="nav-acts">
@@ -287,492 +260,388 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
 <section class="hero">
 <div class="hero-deco-line top"></div>
 <div class="hero-inner">
-<div class="hero-logo-ring"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.48.18%20logo.jpeg" alt="Shuhaagan Sarees" onerror="this.src='https://placehold.co/96x96/C0392B/white?text=S'"></div>
+<div class="hero-logo-medallion"><div class="hero-logo-ring"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.48.18%20logo.jpeg" alt="Shuhaagan Sarees" onerror="this.src='https://placehold.co/96x96/C0392B/white?text=S'"></div></div>
 <div class="hero-divider"><div class="hero-divider-line"></div><div class="hero-divider-gem"></div><div class="hero-divider-line r"></div></div>
 <div class="hero-eyebrow">&#11088; Surat's Favourite Saree Shop</div>
 <div class="hero-shop-name">Shuhaagan Sarees</div>
-<h1>Our Complete <em>Collection</em></h1>
-<p class="hero-desc">Browse 23+ stunning Sarees, Lehengas, Suits and Kurtis. New designs added every day — WhatsApp us to order or visit our Dindoli store!</p>
+<h1>Our Saree <em>Collection</em></h1>
+<p class="hero-desc">Browse our full range of sarees, hand-picked for weddings, festivals, parties and daily wear. New designs added every day &mdash; WhatsApp us to order or visit our Dindoli store!</p>
 <div class="hero-social">
 <a href="https://www.youtube.com/@Shuhaagan_Sarees" class="hs-btn hs-yt" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
 <a href="https://www.instagram.com/shuhaagan_sarees?igsh=MXRycnN1a3k4ZHh6eA%3D%3D" class="hs-btn hs-ig" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
 <a href="https://wa.me/919998148511?text=Hi! I would like to see your collection." class="hs-btn hs-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>WhatsApp</a>
 </div>
-<div class="hero-stats"><div class="hstat"><div class="hstat-n">23+</div><div class="hstat-l">Products</div></div><div class="hstat"><div class="hstat-n">5000+</div><div class="hstat-l">Customers</div></div><div class="hstat"><div class="hstat-n">4.9&#9733;</div><div class="hstat-l">Rating</div></div><div class="hstat"><div class="hstat-n">Daily</div><div class="hstat-l">New Arrivals</div></div></div>
+<div class="hero-stats"><div class="hstat"><div class="hstat-n">22+</div><div class="hstat-l">Sarees</div></div><div class="hstat"><div class="hstat-n">5000+</div><div class="hstat-l">Customers</div></div><div class="hstat"><div class="hstat-n">4.9&#9733;</div><div class="hstat-l">Rating</div></div><div class="hstat"><div class="hstat-n">Daily</div><div class="hstat-l">New Arrivals</div></div></div>
 </div>
 <div class="hero-deco-line bot"></div>
 <div class="hero-corner-br"></div>
 </section>
 <div class="filter-bar"><div class="filter-inner">
 <div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input type="text" id="searchInput" placeholder="Search sarees, designs..." autocomplete="off"></div>
-<div class="filter-tabs">
-<button class="ftab active" data-filter="all">All <span class="cnt">27</span></button>
-<button class="ftab" data-filter="sarees">Sarees <span class="cnt">23</span></button>
-<button class="ftab" data-filter="lehenga">Lehenga <span class="cnt">2</span></button>
-<button class="ftab" data-filter="suits">Suits <span class="cnt">1</span></button>
-<button class="ftab" data-filter="kurtis">Kurtis <span class="cnt">1</span></button>
-</div>
 <div class="price-row"><span class="price-lbl">Price:</span>
 <button class="pftab active" data-price="all" onclick="filterPrice('all',this)">All</button>
 <button class="pftab" data-price="1500" onclick="filterPrice('1500',this)">Under Rs.1,500</button>
 <button class="pftab" data-price="3000" onclick="filterPrice('3000',this)">Under Rs.3,000</button>
 <button class="pftab" data-price="3000+" onclick="filterPrice('3000+',this)">Rs.3,000+</button>
-<div class="res-count" id="resCount">Showing 27 products</div>
+<div class="res-count" id="resCount">Showing 22 sarees</div>
 </div></div></div>
-<div class="cs-notice"><div class="cs-notice-inner">
-<div class="cs-notice-icon">&#127978;</div>
-<div class="cs-notice-text"><strong>Lehenga, Suits & Kurtis</strong> are available in our Dindoli store! Online catalog coming soon. WhatsApp us to check availability and pricing.</div>
-<a href="https://wa.me/919998148511?text=Hi! I want to know about Lehenga, Suits and Kurtis availability." class="cs-notice-wa" target="_blank" rel="noopener">&#128172; Ask on WhatsApp</a>
-</div></div>
-<div class="sec-head"><span class="sec-head-txt">Our Products</span><div class="sec-head-line"></div></div>
+<div class="sec-head"><span class="sec-head-txt">Our Sarees</span><div class="sec-head-line"></div></div>
 <section class="catalog-sec"><div class="catalog-inner">
 <div class="prod-grid" id="productGrid">
-<article class="pc" data-cat="sarees" data-name="red embroidered saree" data-desc="rich red saree with intricate golden booti embroidery — perfect for weddings and festive occasions." data-price="2499">
-  <div class="pc-img">
-    <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.24%20saree1.jpeg" alt="Red Embroidered Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Embroidered%20Saree%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
-    <div class="pc-badge"><span class="badge b-new">New</span></div>
-  </div>
-  <div class="pc-body">
-    <div class="pc-name">Red Embroidered Saree</div>
-    <div class="pc-desc">Rich red saree with intricate golden booti embroidery — perfect for weddings and festive occasions.</div>
-    <div class="pc-price">Rs.2,499</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Embroidered%20Saree%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Order on WhatsApp
-    </a>
-  </div>
-</article>
-<article class="pc" data-cat="sarees" data-name="teal shimmer saree" data-desc="elegant teal-toned saree with sparkling stone-work border — perfect for parties and receptions." data-price="2199">
+<article class="pc" data-name="teal shimmer saree" data-desc="elegant teal-toned saree with sparkling stone-work border — perfect for parties and receptions." data-price="2199">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Teal Shimmer Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Teal%20Shimmer%20Saree%20(Price%3A%20Rs.2%2C199)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Teal%20Shimmer%20Saree%20%28Price%3A%20Rs.2%2C199%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-popular">Popular</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Teal Shimmer Saree</div>
     <div class="pc-desc">Elegant teal-toned saree with sparkling stone-work border — perfect for parties and receptions.</div>
     <div class="pc-price">Rs.2,199</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Teal%20Shimmer%20Saree%20(Price%3A%20Rs.2%2C199)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Teal%20Shimmer%20Saree%20%28Price%3A%20Rs.2%2C199%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="pink sequin saree" data-desc="soft pink net saree with delicate sequin and stone detailing — light and graceful." data-price="1899">
+<article class="pc" data-name="pink sequin saree" data-desc="soft pink net saree with delicate sequin and stone detailing — light and graceful." data-price="1899">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Pink Sequin Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Sequin%20Saree%20(Price%3A%20Rs.1%2C899)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pink%20Sequin%20Saree%20%28Price%3A%20Rs.1%2C899%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Pink Sequin Saree</div>
     <div class="pc-desc">Soft pink net saree with delicate sequin and stone detailing — light and graceful.</div>
     <div class="pc-price">Rs.1,899</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Sequin%20Saree%20(Price%3A%20Rs.1%2C899)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pink%20Sequin%20Saree%20%28Price%3A%20Rs.1%2C899%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="pastel floral embroidered saree" data-desc="beautiful pastel pink fabric with delicate floral embroidery and beadwork — elegant and unique." data-price="2799">
+<article class="pc" data-name="pastel floral embroidered saree" data-desc="beautiful pastel pink fabric with delicate floral embroidery and beadwork — elegant and unique." data-price="2799">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree4.jpeg" alt="Pastel Floral Embroidered Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pastel%20Floral%20Embroidered%20Saree%20(Price%3A%20Rs.2%2C799)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pastel%20Floral%20Embroidered%20Saree%20%28Price%3A%20Rs.2%2C799%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-new">New</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Pastel Floral Embroidered Saree</div>
     <div class="pc-desc">Beautiful pastel pink fabric with delicate floral embroidery and beadwork — elegant and unique.</div>
     <div class="pc-price">Rs.2,799</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pastel%20Floral%20Embroidered%20Saree%20(Price%3A%20Rs.2%2C799)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pastel%20Floral%20Embroidered%20Saree%20%28Price%3A%20Rs.2%2C799%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="royal maroon bandhani" data-desc="traditional bandhani work in rich maroon with golden zari border — a timeless classic." data-price="2499">
+<article class="pc" data-name="royal maroon bandhani" data-desc="traditional bandhani work in rich maroon with golden zari border — a timeless classic." data-price="2499">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.27%20saree5.jpeg" alt="Royal Maroon Bandhani" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Royal%20Maroon%20Bandhani%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Royal%20Maroon%20Bandhani%20%28Price%3A%20Rs.2%2C499%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Royal Maroon Bandhani</div>
     <div class="pc-desc">Traditional Bandhani work in rich maroon with golden zari border — a timeless classic.</div>
     <div class="pc-price">Rs.2,499</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Royal%20Maroon%20Bandhani%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Royal%20Maroon%20Bandhani%20%28Price%3A%20Rs.2%2C499%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="crimson red bridal saree" data-desc="stunning crimson red with heavy embroidery and peacock motifs — ideal for bridal wear." data-price="2999">
+<article class="pc" data-name="crimson red bridal saree" data-desc="stunning crimson red with heavy embroidery and peacock motifs — ideal for bridal wear." data-price="2999">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.28%20saree6.jpeg" alt="Crimson Red Bridal Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Crimson%20Red%20Bridal%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Crimson%20Red%20Bridal%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-bridal">Bridal</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Crimson Red Bridal Saree</div>
     <div class="pc-desc">Stunning crimson red with heavy embroidery and peacock motifs — ideal for bridal wear.</div>
     <div class="pc-price">Rs.2,999</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Crimson%20Red%20Bridal%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Crimson%20Red%20Bridal%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="golden thread work saree" data-desc="exquisite golden thread work on cream base — elegant for any special occasion." data-price="2899">
+<article class="pc" data-name="golden thread work saree" data-desc="exquisite golden thread work on cream base — elegant for any special occasion." data-price="2899">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.29%20saree7.jpeg" alt="Golden Thread Work Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Golden%20Thread%20Work%20Saree%20(Price%3A%20Rs.2%2C899)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Golden%20Thread%20Work%20Saree%20%28Price%3A%20Rs.2%2C899%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Golden Thread Work Saree</div>
     <div class="pc-desc">Exquisite golden thread work on cream base — elegant for any special occasion.</div>
     <div class="pc-price">Rs.2,899</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Golden%20Thread%20Work%20Saree%20(Price%3A%20Rs.2%2C899)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Golden%20Thread%20Work%20Saree%20%28Price%3A%20Rs.2%2C899%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="deep red festive saree" data-desc="deep red with intricate mirror work and heavy border — perfect for navratri and festivals." data-price="1999">
+<article class="pc" data-name="deep red festive saree" data-desc="deep red with intricate mirror work and heavy border — perfect for navratri and festivals." data-price="1999">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20saree8.jpeg" alt="Deep Red Festive Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Deep%20Red%20Festive%20Saree%20(Price%3A%20Rs.1%2C999)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Deep%20Red%20Festive%20Saree%20%28Price%3A%20Rs.1%2C999%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-festive">Festive</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Deep Red Festive Saree</div>
     <div class="pc-desc">Deep red with intricate mirror work and heavy border — perfect for Navratri and festivals.</div>
     <div class="pc-price">Rs.1,999</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Deep%20Red%20Festive%20Saree%20(Price%3A%20Rs.1%2C999)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Deep%20Red%20Festive%20Saree%20%28Price%3A%20Rs.1%2C999%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="magenta peacock saree" data-desc="vibrant magenta with peacock embroidery and heavy pallu — a showstopper piece." data-price="2999">
+<article class="pc" data-name="magenta peacock saree" data-desc="vibrant magenta with peacock embroidery and heavy pallu — a showstopper piece." data-price="2999">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.31%20saree9.jpeg" alt="Magenta Peacock Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Magenta%20Peacock%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Magenta%20Peacock%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-popular">Popular</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Magenta Peacock Saree</div>
     <div class="pc-desc">Vibrant magenta with peacock embroidery and heavy pallu — a showstopper piece.</div>
     <div class="pc-price">Rs.2,999</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Magenta%20Peacock%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Magenta%20Peacock%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="ruby red mirror work saree" data-desc="ruby red with traditional mirror work and bead detailing — authentic gujarati craft." data-price="2299">
+<article class="pc" data-name="ruby red mirror work saree" data-desc="ruby red with traditional mirror work and bead detailing — authentic gujarati craft." data-price="2299">
   <div class="pc-img">
-    <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.24%20saree10.jpeg" alt="Ruby Red Mirror Work Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Ruby%20Red%20Mirror%20Work%20Saree%20(Price%3A%20Rs.2%2C299)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.24%20saree10jpeg" alt="Ruby Red Mirror Work Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Ruby%20Red%20Mirror%20Work%20Saree%20%28Price%3A%20Rs.2%2C299%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Ruby Red Mirror Work Saree</div>
     <div class="pc-desc">Ruby red with traditional mirror work and bead detailing — authentic Gujarati craft.</div>
     <div class="pc-price">Rs.2,299</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Ruby%20Red%20Mirror%20Work%20Saree%20(Price%3A%20Rs.2%2C299)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Ruby%20Red%20Mirror%20Work%20Saree%20%28Price%3A%20Rs.2%2C299%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="orange bandhani saree" data-desc="bright orange bandhani saree with heavy border — perfect for haldi and festive occasions." data-price="1999">
+<article class="pc" data-name="orange bandhani saree" data-desc="bright orange bandhani saree with heavy border — perfect for haldi and festive occasions." data-price="1999">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.25%20saree11.jpeg" alt="Orange Bandhani Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Orange%20Bandhani%20Saree%20(Price%3A%20Rs.1%2C999)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Orange%20Bandhani%20Saree%20%28Price%3A%20Rs.1%2C999%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-new">New</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Orange Bandhani Saree</div>
     <div class="pc-desc">Bright orange Bandhani saree with heavy border — perfect for haldi and festive occasions.</div>
     <div class="pc-price">Rs.1,999</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Orange%20Bandhani%20Saree%20(Price%3A%20Rs.1%2C999)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Orange%20Bandhani%20Saree%20%28Price%3A%20Rs.1%2C999%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="pink gota patti saree" data-desc="soft pink with gota patti work and heavy border — elegant and lightweight." data-price="2149">
+<article class="pc" data-name="pink gota patti saree" data-desc="soft pink with gota patti work and heavy border — elegant and lightweight." data-price="2149">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.25%20saree12.jpeg" alt="Pink Gota Patti Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Gota%20Patti%20Saree%20(Price%3A%20Rs.2%2C149)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pink%20Gota%20Patti%20Saree%20%28Price%3A%20Rs.2%2C149%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Pink Gota Patti Saree</div>
     <div class="pc-desc">Soft pink with Gota Patti work and heavy border — elegant and lightweight.</div>
     <div class="pc-price">Rs.2,149</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Gota%20Patti%20Saree%20(Price%3A%20Rs.2%2C149)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pink%20Gota%20Patti%20Saree%20%28Price%3A%20Rs.2%2C149%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="green festive saree" data-desc="rich green saree with golden embroidery — perfect for mehndi and festive events." data-price="2499">
+<article class="pc" data-name="green festive saree" data-desc="rich green saree with golden embroidery — perfect for mehndi and festive events." data-price="2499">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.26%20saree13.jpeg" alt="Green Festive Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Green%20Festive%20Saree%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Green%20Festive%20Saree%20%28Price%3A%20Rs.2%2C499%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-festive">Festive</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Green Festive Saree</div>
     <div class="pc-desc">Rich green saree with golden embroidery — perfect for mehndi and festive events.</div>
     <div class="pc-price">Rs.2,499</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Green%20Festive%20Saree%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Green%20Festive%20Saree%20%28Price%3A%20Rs.2%2C499%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="red bridal saree" data-desc="heavy red bridal saree with intricate zari and stone work — perfect wedding look." data-price="2999">
+<article class="pc" data-name="red bridal saree" data-desc="heavy red bridal saree with intricate zari and stone work — perfect wedding look." data-price="2999">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.26%20saree14.jpeg" alt="Red Bridal Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Bridal%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Red%20Bridal%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-bridal">Bridal</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Red Bridal Saree</div>
     <div class="pc-desc">Heavy red bridal saree with intricate zari and stone work — perfect wedding look.</div>
     <div class="pc-price">Rs.2,999</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red%20Bridal%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Red%20Bridal%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="peach embroidered saree" data-desc="peach saree with delicate embroidery and lace detailing — comfortable and beautiful." data-price="1499">
+<article class="pc" data-name="peach embroidered saree" data-desc="peach saree with delicate embroidery and lace detailing — comfortable and beautiful." data-price="1499">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.27%20saree15.jpeg" alt="Peach Embroidered Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Peach%20Embroidered%20Saree%20(Price%3A%20Rs.1%2C499)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Peach%20Embroidered%20Saree%20%28Price%3A%20Rs.1%2C499%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Peach Embroidered Saree</div>
     <div class="pc-desc">Peach saree with delicate embroidery and lace detailing — comfortable and beautiful.</div>
     <div class="pc-price">Rs.1,499</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Peach%20Embroidered%20Saree%20(Price%3A%20Rs.1%2C499)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Peach%20Embroidered%20Saree%20%28Price%3A%20Rs.1%2C499%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="yellow haldi saree" data-desc="bright yellow saree with light embroidery — perfect for haldi ceremonies." data-price="1799">
+<article class="pc" data-name="yellow haldi saree" data-desc="bright yellow saree with light embroidery — perfect for haldi ceremonies." data-price="1799">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.27%20saree16.jpeg" alt="Yellow Haldi Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Yellow%20Haldi%20Saree%20(Price%3A%20Rs.1%2C799)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Yellow%20Haldi%20Saree%20%28Price%3A%20Rs.1%2C799%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-haldi">Haldi</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Yellow Haldi Saree</div>
     <div class="pc-desc">Bright yellow saree with light embroidery — perfect for haldi ceremonies.</div>
     <div class="pc-price">Rs.1,799</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Yellow%20Haldi%20Saree%20(Price%3A%20Rs.1%2C799)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Yellow%20Haldi%20Saree%20%28Price%3A%20Rs.1%2C799%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="coral pink party saree" data-desc="coral pink with sequin work and stylish border — great for parties and receptions." data-price="2449">
+<article class="pc" data-name="coral pink party saree" data-desc="coral pink with sequin work and stylish border — great for parties and receptions." data-price="2449">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.25%20AM%20saree17.jpeg" alt="Coral Pink Party Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Coral%20Pink%20Party%20Saree%20(Price%3A%20Rs.2%2C449)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Coral%20Pink%20Party%20Saree%20%28Price%3A%20Rs.2%2C449%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Coral Pink Party Saree</div>
     <div class="pc-desc">Coral pink with sequin work and stylish border — great for parties and receptions.</div>
     <div class="pc-price">Rs.2,449</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Coral%20Pink%20Party%20Saree%20(Price%3A%20Rs.2%2C449)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Coral%20Pink%20Party%20Saree%20%28Price%3A%20Rs.2%2C449%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="wine red evening saree" data-desc="deep wine red with subtle shimmer and elegant border — perfect evening wear." data-price="1999">
+<article class="pc" data-name="wine red evening saree" data-desc="deep wine red with subtle shimmer and elegant border — perfect evening wear." data-price="1999">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.24%20saree18.jpeg" alt="Wine Red Evening Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Wine%20Red%20Evening%20Saree%20(Price%3A%20Rs.1%2C999)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Wine%20Red%20Evening%20Saree%20%28Price%3A%20Rs.1%2C999%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Wine Red Evening Saree</div>
     <div class="pc-desc">Deep wine red with subtle shimmer and elegant border — perfect evening wear.</div>
     <div class="pc-price">Rs.1,999</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Wine%20Red%20Evening%20Saree%20(Price%3A%20Rs.1%2C999)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Wine%20Red%20Evening%20Saree%20%28Price%3A%20Rs.1%2C999%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="light pink daily wear saree" data-desc="light pink with minimal work — comfortable and elegant for daily wear." data-price="1499">
+<article class="pc" data-name="light pink daily wear saree" data-desc="light pink with minimal work — comfortable and elegant for daily wear." data-price="1499">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.54.24%20AM%20saree19.jpeg" alt="Light Pink Daily Wear Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Light%20Pink%20Daily%20Wear%20Saree%20(Price%3A%20Rs.1%2C499)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Light%20Pink%20Daily%20Wear%20Saree%20%28Price%3A%20Rs.1%2C499%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Light Pink Daily Wear Saree</div>
     <div class="pc-desc">Light pink with minimal work — comfortable and elegant for daily wear.</div>
     <div class="pc-price">Rs.1,499</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Light%20Pink%20Daily%20Wear%20Saree%20(Price%3A%20Rs.1%2C499)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Light%20Pink%20Daily%20Wear%20Saree%20%28Price%3A%20Rs.1%2C499%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="maroon zari border saree" data-desc="maroon with heavy golden zari border and pallu — traditional and grand." data-price="2499">
+<article class="pc" data-name="maroon zari border saree" data-desc="maroon with heavy golden zari border and pallu — traditional and grand." data-price="2499">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.31%20saree20.jpeg" alt="Maroon Zari Border Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Maroon%20Zari%20Border%20Saree%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Maroon%20Zari%20Border%20Saree%20%28Price%3A%20Rs.2%2C499%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Maroon Zari Border Saree</div>
     <div class="pc-desc">Maroon with heavy golden zari border and pallu — traditional and grand.</div>
     <div class="pc-price">Rs.2,499</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Maroon%20Zari%20Border%20Saree%20(Price%3A%20Rs.2%2C499)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Maroon%20Zari%20Border%20Saree%20%28Price%3A%20Rs.2%2C499%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="multi-color bandhani saree" data-desc="vibrant multi-color bandhani with heavy border — authentic surat craftsmanship." data-price="2299">
+<article class="pc" data-name="multi-color bandhani saree" data-desc="vibrant multi-color bandhani with heavy border — authentic surat craftsmanship." data-price="2299">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20saree21.jpeg" alt="Multi-Color Bandhani Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Multi-Color%20Bandhani%20Saree%20(Price%3A%20Rs.2%2C299)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Multi-Color%20Bandhani%20Saree%20%28Price%3A%20Rs.2%2C299%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Multi-Color Bandhani Saree</div>
     <div class="pc-desc">Vibrant multi-color Bandhani with heavy border — authentic Surat craftsmanship.</div>
     <div class="pc-price">Rs.2,299</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Multi-Color%20Bandhani%20Saree%20(Price%3A%20Rs.2%2C299)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Multi-Color%20Bandhani%20Saree%20%28Price%3A%20Rs.2%2C299%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="red-gold wedding saree" data-desc="red and gold combination with heavy embroidery — the perfect wedding choice." data-price="2999">
+<article class="pc" data-name="red-gold wedding saree" data-desc="red and gold combination with heavy embroidery — the perfect wedding choice." data-price="2999">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20AM%20saree22.jpeg" alt="Red-Gold Wedding Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red-Gold%20Wedding%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Red-Gold%20Wedding%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     <div class="pc-badge"><span class="badge b-bridal">Bridal</span></div>
   </div>
   <div class="pc-body">
     <div class="pc-name">Red-Gold Wedding Saree</div>
     <div class="pc-desc">Red and gold combination with heavy embroidery — the perfect wedding choice.</div>
     <div class="pc-price">Rs.2,999</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Red-Gold%20Wedding%20Saree%20(Price%3A%20Rs.2%2C999)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Red-Gold%20Wedding%20Saree%20%28Price%3A%20Rs.2%2C999%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc" data-cat="sarees" data-name="pink floral daily saree" data-desc="pink with floral print and light border — comfortable and beautiful for daily wear." data-price="1599">
+<article class="pc" data-name="pink floral daily saree" data-desc="pink with floral print and light border — comfortable and beautiful for daily wear." data-price="1599">
   <div class="pc-img">
     <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.30%20AM%20saree23.jpeg" alt="Pink Floral Daily Saree" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x530/FDF0EE/C0392B?text=Shuhaagan'">
-    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Floral%20Daily%20Saree%20(Price%3A%20Rs.1%2C599)." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
+    <div class="pc-overlay"><a class="quick-wa" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pink%20Floral%20Daily%20Saree%20%28Price%3A%20Rs.1%2C599%29." target="_blank" rel="noopener">&#128172; Quick Enquiry</a></div>
     
   </div>
   <div class="pc-body">
     <div class="pc-name">Pink Floral Daily Saree</div>
     <div class="pc-desc">Pink with floral print and light border — comfortable and beautiful for daily wear.</div>
     <div class="pc-price">Rs.1,599</div>
-    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Pink%20Floral%20Daily%20Saree%20(Price%3A%20Rs.1%2C599)." target="_blank" rel="noopener">
+    <a class="pc-btn" href="https://wa.me/919998148511?text=Hi%21%20I%20am%20interested%20in%20the%20Pink%20Floral%20Daily%20Saree%20%28Price%3A%20Rs.1%2C599%29." target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Order on WhatsApp
     </a>
   </div>
 </article>
-<article class="pc coming-soon-card" data-cat="lehenga" data-name="bridal lehenga" data-desc="stunning bridal lehenga with heavy zari and stone work. available in our dindoli store — visit or whatsapp us!" data-price="0">
-  <div class="pc-img cs-img-wrap">
-    <div class="cs-placeholder">
-      <div class="cs-icon">&#128120;</div>
-      <div class="cs-soon-label">Coming Soon</div>
-      <div class="cs-store-label">Available in Store</div>
-    </div>
-    <div class="pc-badge"><span class="badge b-bridal">Bridal</span></div>
-  </div>
-  <div class="pc-body">
-    <div class="pc-name">Bridal Lehenga</div>
-    <div class="pc-desc">Stunning bridal lehenga with heavy zari and stone work. Available in our Dindoli store — visit or WhatsApp us!</div>
-    <div class="pc-price cs-price">Available in Shop</div>
-    <a class="pc-btn cs-wa-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Bridal%20Lehenga%20(Price%3A%20Coming%20Soon)." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Enquire on WhatsApp
-    </a>
-  </div>
-</article>
-<article class="pc coming-soon-card" data-cat="lehenga" data-name="festive lehenga" data-desc="rich festive lehenga with mirror and gota work. visit our store or whatsapp for price and availability!" data-price="0">
-  <div class="pc-img cs-img-wrap">
-    <div class="cs-placeholder">
-      <div class="cs-icon">&#128120;</div>
-      <div class="cs-soon-label">Coming Soon</div>
-      <div class="cs-store-label">Available in Store</div>
-    </div>
-    <div class="pc-badge"><span class="badge b-festive">Festive</span></div>
-  </div>
-  <div class="pc-body">
-    <div class="pc-name">Festive Lehenga</div>
-    <div class="pc-desc">Rich festive lehenga with mirror and gota work. Visit our store or WhatsApp for price and availability!</div>
-    <div class="pc-price cs-price">Available in Shop</div>
-    <a class="pc-btn cs-wa-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Festive%20Lehenga%20(Price%3A%20Coming%20Soon)." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Enquire on WhatsApp
-    </a>
-  </div>
-</article>
-<article class="pc coming-soon-card" data-cat="suits" data-name="party wear suit" data-desc="elegant embroidered suit set perfect for parties. available in store — whatsapp us to check designs!" data-price="0">
-  <div class="pc-img cs-img-wrap">
-    <div class="cs-placeholder">
-      <div class="cs-icon">&#129525;</div>
-      <div class="cs-soon-label">Coming Soon</div>
-      <div class="cs-store-label">Available in Store</div>
-    </div>
-    
-  </div>
-  <div class="pc-body">
-    <div class="pc-name">Party Wear Suit</div>
-    <div class="pc-desc">Elegant embroidered suit set perfect for parties. Available in store — WhatsApp us to check designs!</div>
-    <div class="pc-price cs-price">Available in Shop</div>
-    <a class="pc-btn cs-wa-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Party%20Wear%20Suit%20(Price%3A%20Coming%20Soon)." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Enquire on WhatsApp
-    </a>
-  </div>
-</article>
-<article class="pc coming-soon-card" data-cat="kurtis" data-name="casual kurti set" data-desc="comfortable daily wear kurti set in multiple colors. visit our dindoli store or whatsapp to order!" data-price="0">
-  <div class="pc-img cs-img-wrap">
-    <div class="cs-placeholder">
-      <div class="cs-icon">&#128188;</div>
-      <div class="cs-soon-label">Coming Soon</div>
-      <div class="cs-store-label">Available in Store</div>
-    </div>
-    
-  </div>
-  <div class="pc-body">
-    <div class="pc-name">Casual Kurti Set</div>
-    <div class="pc-desc">Comfortable daily wear kurti set in multiple colors. Visit our Dindoli store or WhatsApp to order!</div>
-    <div class="pc-price cs-price">Available in Shop</div>
-    <a class="pc-btn cs-wa-btn" href="https://wa.me/919998148511?text=Hi!%20I%20am%20interested%20in%20the%20Casual%20Kurti%20Set%20(Price%3A%20Coming%20Soon)." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="white" width="13" height="13"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Enquire on WhatsApp
-    </a>
-  </div>
-</article>
 </div>
-<div class="no-results" id="noResults"><h3>No products found</h3><p>Try a different search or browse all categories.</p><button class="ftab active" onclick="resetFilters()" style="margin-top:8px">View All</button></div>
+<div class="no-results" id="noResults"><h3>No sarees found</h3><p>Try a different search or price filter.</p><button class="pftab active" onclick="resetFilters()" style="margin-top:8px">View All</button>
 </div></section>
 <section class="social-sec">
 <div class="social-inner">
@@ -794,14 +663,13 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
 </div></div></section>
 <footer>
 <div class="ft-inner">
-<div><div class="ft-brand-name">Shuhaagan Sarees</div><p class="ft-desc">Beautiful Sarees, Lehengas, Suits & Kurtis from Surat, Gujarat. New designs added daily. Order on WhatsApp.</p>
+<div><div class="ft-brand-name">Shuhaagan Sarees</div><p class="ft-desc">Beautiful sarees from Surat, Gujarat. New designs added daily. Order on WhatsApp.</p>
 <div class="ft-social">
 <a href="https://www.instagram.com/shuhaagan_sarees?igsh=MXRycnN1a3k4ZHh6eA%3D%3D" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
 <a href="https://www.youtube.com/@Shuhaagan_Sarees" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1.1-1.1-1.9-2.2-2.2C19.3 3.5 12 3.5 12 3.5s-7.3 0-9.3.5C1.6 4.3.8 5.1.5 6.2 0 8.2 0 12 0 12s0 3.8.5 5.8c.3 1.1 1.1 1.9 2.2 2.2 2 .5 9.3.5 9.3.5s7.3 0 9.3-.5c1.1-.3 1.9-1.1 2.2-2.2.5-2 .5-5.8.5-5.8s0-3.8-.5-5.8zM9.5 15.5V8.5l6.2 3.5-6.2 3.5z"/></svg></a>
 <a href="https://wa.me/919998148511" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></a>
 </div></div>
-<div class="ft-col"><h4>Collections</h4><a href="#" onclick="filterCat('sarees');return false">Sarees</a><a href="#" onclick="filterCat('lehenga');return false">Lehenga</a><a href="#" onclick="filterCat('suits');return false">Suits</a><a href="#" onclick="filterCat('kurtis');return false">Kurtis</a></div>
-<div class="ft-col"><h4>Occasions</h4><a href="https://wa.me/919998148511?text=Hi! Please show me Bridal wear." target="_blank">Bridal</a><a href="https://wa.me/919998148511?text=Hi! Please show me Festive wear." target="_blank">Festive</a><a href="https://wa.me/919998148511?text=Hi! Please show me Party wear." target="_blank">Party Wear</a><a href="https://wa.me/919998148511?text=Hi! Please show me Daily wear." target="_blank">Daily Wear</a></div>
+<div class="ft-col"><h4>Occasions</h4><a href="https://wa.me/919998148511?text=Hi! Please show me Bridal sarees." target="_blank">Bridal</a><a href="https://wa.me/919998148511?text=Hi! Please show me Festive sarees." target="_blank">Festive</a><a href="https://wa.me/919998148511?text=Hi! Please show me Party wear sarees." target="_blank">Party Wear</a><a href="https://wa.me/919998148511?text=Hi! Please show me Daily wear sarees." target="_blank">Daily Wear</a></div>
 <div class="ft-col"><h4>Contact</h4><a href="tel:9998148511">+91 9998148511</a><a href="https://wa.me/919998148511" target="_blank">WhatsApp</a><a href="https://www.instagram.com/shuhaagan_sarees?igsh=MXRycnN1a3k4ZHh6eA%3D%3D" target="_blank">Instagram</a><a href="https://www.youtube.com/@Shuhaagan_Sarees" target="_blank">YouTube</a></div>
 </div>
 <div class="ft-bottom"><div class="ft-copy">&copy; 2026 Shuhaagan Sarees. All rights reserved. | Dindoli, Surat, Gujarat</div><div class="ft-links"><a href="index.html">Home</a><a href="catalog.html">Catalog</a></div></div>
@@ -812,33 +680,28 @@ footer{background:#0F0402;color:rgba(255,255,255,.45);padding:44px 56px 20px}
 var grid=document.getElementById("productGrid");
 var cards=Array.from(grid.querySelectorAll(".pc"));
 var searchInput=document.getElementById("searchInput");
-var tabs=document.querySelectorAll(".ftab[data-filter]");
 var priceTabs=document.querySelectorAll(".pftab[data-price]");
 var resCount=document.getElementById("resCount");
 var noResults=document.getElementById("noResults");
-var currentFilter="all";
 var currentPrice="all";
 
 function updateCount(n){
-  resCount.textContent="Showing "+n+" product"+(n!==1?"s":"");
+  resCount.textContent="Showing "+n+" saree"+(n!==1?"s":"");
 }
 
 function filterAll(){
   var term=searchInput.value.toLowerCase().trim();
   var visible=0;
   cards.forEach(function(card){
-    var cat=card.getAttribute("data-cat");
     var name=card.getAttribute("data-name");
     var desc=card.getAttribute("data-desc");
     var price=parseInt(card.getAttribute("data-price"))||0;
-    var isCS=card.classList.contains("coming-soon-card");
-    var matchCat=currentFilter==="all"||cat===currentFilter;
     var matchSearch=!term||name.indexOf(term)!==-1||desc.indexOf(term)!==-1;
-    var matchPrice=currentPrice==="all"||isCS||
+    var matchPrice=currentPrice==="all"||
       (currentPrice==="1500"&&price<1500)||
       (currentPrice==="3000"&&price<3000)||
       (currentPrice==="3000+"&&price>=3000);
-    if(matchCat&&matchSearch&&matchPrice){
+    if(matchSearch&&matchPrice){
       card.style.display="";
       visible++;
       (function(c,i){setTimeout(function(){c.classList.add("visible");},i*30);})(card,visible);
@@ -851,11 +714,6 @@ function filterAll(){
   noResults.classList.toggle("show",visible===0);
 }
 
-window.filterCat=function(cat){
-  currentFilter=cat;
-  tabs.forEach(function(t){t.classList.toggle("active",t.getAttribute("data-filter")===cat);});
-  filterAll();
-};
 window.filterPrice=function(p,btn){
   currentPrice=p;
   priceTabs.forEach(function(t){t.classList.remove("active");});
@@ -866,12 +724,9 @@ window.resetFilters=function(){
   searchInput.value="";
   currentPrice="all";
   priceTabs.forEach(function(t){t.classList.toggle("active",t.getAttribute("data-price")==="all");});
-  filterCat("all");
+  filterAll();
 };
 
-tabs.forEach(function(tab){
-  tab.addEventListener("click",function(){filterCat(this.getAttribute("data-filter"));});
-});
 searchInput.addEventListener("input",filterAll);
 
 // Marquee clone
