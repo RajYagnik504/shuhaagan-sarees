@@ -1488,7 +1488,10 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
         })
       });
 
-      if (!res.ok) throw new Error('API error ' + res.status);
+      if (!res.ok) {
+        var errBody = await res.text();
+        throw new Error('API error ' + res.status + ': ' + errBody);
+      }
       var data = await res.json();
       var raw = (data.content && data.content[0] && data.content[0].text) || "Sorry, I'm having trouble right now — please message us directly on WhatsApp!";
 
