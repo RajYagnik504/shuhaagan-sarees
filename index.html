@@ -6,7 +6,7 @@
 <meta name="description" content="Shuhaagan Sarees — Beautiful Sarees in Surat, Gujarat. Order on WhatsApp. 5000+ happy customers.">
 <meta name="keywords" content="sarees, surat, gujarat, bridal wear, wedding sarees, ethnic wear">
 <meta name="author" content="Shuhaagan Sarees">
-<meta name="theme-color" content="#C0392B">
+<meta name="theme-color" content="#0E5C55">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rajyagnik504.github.io/shuhaagan-sarees">
@@ -22,7 +22,7 @@
 <link rel="canonical" href="https://rajyagnik504.github.io/shuhaagan-sarees">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
 {
@@ -63,28 +63,36 @@
 <style>
 /* ── DESIGN TOKENS ── */
 :root {
-  --brand:      #C0392B;
-  --brand-dk:   #96281B;
-  --brand-lt:   #FDF0EE;
-  --gold:       #D4A017;
-  --gold-lt:    #FFF8E7;
-  --bg:         #FAFAFA;
+  /* Peacock teal + brass + handloom ivory — colors pulled from the actual
+     product photos (teal shimmer, zari borders) and Gujarati wedding
+     palettes, instead of the default red/gold "ethnic wear" template. */
+  --brand:      #0E5C55;   /* deep peacock teal — primary */
+  --brand-dk:   #083D38;   /* peacock, shadowed */
+  --brand-lt:   #E8F2EF;   /* peacock, washed for chips/tags */
+  --gold:       #C08A2E;   /* brass/zari gold — accent, used sparingly */
+  --gold-lt:    #FBF1DD;
+  --rust:       #B9532F;   /* terracotta — reserved for the wishlist / a single warm accent */
+  --bg:         #FAF7F0;   /* handloom cotton, not stark white */
   --surface:    #FFFFFF;
-  --fg:         #1A0A08;
-  --fg2:        #4A1A14;
-  --muted:      #F5EDED;
-  --border:     #ECD8D6;
-  --text-muted: #9A7070;
-  --sh-xs:  0 1px 4px  rgba(192,57,43,.05);
-  --sh-sm:  0 4px 16px rgba(192,57,43,.09);
-  --sh-md:  0 12px 36px rgba(192,57,43,.13);
-  --sh-lg:  0 28px 64px rgba(192,57,43,.17);
-  --serif:  'Playfair Display', Georgia, serif;
-  --sans:   'Plus Jakarta Sans', system-ui, sans-serif;
-  --r-sm: 8px;
-  --r-md: 14px;
-  --r-lg: 20px;
-  --r-xl: 28px;
+  --fg:         #1E1A16;   /* warm ink, not true black */
+  --fg2:        #46362B;
+  --muted:      #F3EDE1;
+  --border:     #E7DFCE;
+  --text-muted: #8A7C68;
+  --sh-xs:  0 1px 4px  rgba(14,92,85,.06);
+  --sh-sm:  0 4px 16px rgba(14,92,85,.10);
+  --sh-md:  0 12px 36px rgba(14,92,85,.14);
+  --sh-lg:  0 28px 64px rgba(14,92,85,.18);
+  --serif:  'Fraunces', Georgia, serif;
+  --sans:   'Manrope', system-ui, sans-serif;
+  --hand:   'Caveat', cursive; /* used once: the price tag, our signature element */
+  /* a woven zari-border rule — the recurring motif, standing in for
+     generic gradient bars */
+  --motif: repeating-linear-gradient(90deg, var(--gold) 0 3px, var(--brand) 3px 5px, transparent 5px 9px);
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 18px;
+  --r-xl: 26px;
   --ann-h:   34px;
   --nav-h:   54px;
   --menu-h:  42px;
@@ -118,7 +126,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
   position: fixed; top: 0; left: 0; height: 3px;
   background: linear-gradient(90deg, var(--brand), var(--gold));
   z-index: 10000; width: 0%; transition: width .1s linear;
-  box-shadow: 0 0 8px rgba(192,57,43,.4);
+  box-shadow: 0 0 8px rgba(14,92,85,.4);
 }
 
 /* ── SKELETON LOADING ── */
@@ -184,7 +192,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .nav-action:hover { color: var(--brand); }
 .nav-action::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--brand); transition: width .25s; }
 .nav-action:hover::after { width: 100%; }
-.wa-pill      { display: flex; align-items: center; gap: 6px; background: #25D366; color: #fff; padding: 7px 16px; border-radius: 50px; font-size: 12.5px; font-weight: 600; transition: all .25s var(--ease); min-height: 36px; position: relative; overflow: hidden; }
+.wa-pill      { display: flex; align-items: center; gap: 6px; background: #25D366; color: #fff; padding: 7px 16px; border-radius: var(--r-md); font-size: 12.5px; font-weight: 600; transition: all .25s var(--ease); min-height: 36px; position: relative; overflow: hidden; }
 .wa-pill::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transform: translateX(-100%); transition: transform .5s; }
 .wa-pill:hover { background: #1EB858; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,211,102,.4); }
 .wa-pill:hover::before { transform: translateX(100%); }
@@ -235,23 +243,18 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .hero-content { position: relative; z-index: 2; max-width: 580px; padding: 60px 80px 80px; animation: fadeInUp 1s var(--ease) .3s both; }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: rgba(212,160,23,.15); border: 1px solid rgba(212,160,23,.32);
-  color: #F0C840; padding: 5px 16px; border-radius: 50px;
-  font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 22px;
+  color: #E8C77A; font-size: 12px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;
   animation: fadeInUp .8s var(--ease) .5s both;
 }
+.hero-eyebrow-rule { display: block; width: 40px; height: 4px; margin-top: 10px; background-image: var(--motif); }
 .hero-logo-block { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; animation: fadeInUp .8s var(--ease) .7s both; }
 .hero-logo-ring {
   width: var(--logo-sz); height: var(--logo-sz);
   border-radius: 50%; overflow: hidden;
-  border: 3px solid rgba(212,160,23,.55);
-  box-shadow: 0 0 0 7px rgba(212,160,23,.1), var(--sh-md);
-  flex-shrink: 0; animation: logoPulse 3s ease-in-out infinite;
-}
-@keyframes logoPulse {
-  0%, 100% { box-shadow: 0 0 0 7px rgba(212,160,23,.1), var(--sh-md); }
-  50%       { box-shadow: 0 0 0 12px rgba(212,160,23,.18), var(--sh-md); }
+  border: 3px solid rgba(192,138,46,.55);
+  box-shadow: 0 0 0 7px rgba(192,138,46,.12), var(--sh-md);
+  flex-shrink: 0;
 }
 .hero-logo-ring img { width: 100%; height: 100%; object-fit: cover; }
 .hero-brand-text .b1 { font-family: var(--serif); font-size: clamp(38px, 5vw, 60px); font-weight: 800; color: #fff; line-height: 1; letter-spacing: 1px; }
@@ -277,7 +280,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 /* ── BUTTONS ── */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  min-height: 48px; padding: 12px 28px; border-radius: 50px;
+  min-height: 48px; padding: 12px 28px; border-radius: var(--r-md);
   font-size: 14px; font-weight: 700; cursor: pointer;
   transition: all .25s var(--ease); position: relative; overflow: hidden;
 }
@@ -289,28 +292,30 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 
 /* ── TRUST STRIP ── */
 .trust-strip {
-  background: linear-gradient(90deg, var(--brand-dk) 0%, var(--brand) 50%, var(--brand-dk) 100%);
-  overflow: hidden; height: 44px; display: flex; align-items: center;
+  background: var(--brand-dk);
+  border-top: 1px solid rgba(192,138,46,.35);
+  border-bottom: 1px solid rgba(192,138,46,.35);
+  padding: 12px 24px;
 }
-.trust-track { display: flex; white-space: nowrap; animation: marquee 22s linear infinite; }
-.trust-track:hover { animation-play-state: paused; }
+.trust-track { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 8px; }
 .trust-item {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 0 32px; height: 44px; border-right: 1px solid rgba(255,255,255,.2);
-  color: #fff; font-size: 12.5px; font-weight: 600; letter-spacing: .3px; flex-shrink: 0;
+  padding: 4px 22px; border-right: 1px solid rgba(255,255,255,.16);
+  color: rgba(255,255,255,.92); font-size: 12.5px; font-weight: 600; letter-spacing: .2px;
 }
-.trust-item svg { width: 15px; height: 15px; flex-shrink: 0; opacity: .9; }
+.trust-item:last-child { border-right: none; }
+.trust-item svg { width: 15px; height: 15px; flex-shrink: 0; opacity: .85; color: var(--gold); }
 
 /* ── CATEGORY BUBBLES ── */
 .cat-sec       { background: #fff; border-bottom: 1px solid var(--border); }
 .cat-sec-inner { max-width: 1200px; margin: 0 auto; padding: 36px 56px; }
 .sec-label     { font-family: var(--serif); font-size: 26px; font-weight: 700; color: var(--fg); margin-bottom: 6px; }
-.ornament      { display: block; width: 48px; height: 3px; background: linear-gradient(90deg, var(--brand), var(--gold)); border-radius: 2px; margin-bottom: 24px; }
+.ornament      { display: block; width: 56px; height: 5px; background-image: var(--motif); margin-bottom: 24px; }
 .cat-bubbles   { display: flex; gap: 20px; flex-wrap: wrap; }
 .cat-bubble    { display: flex; flex-direction: column; align-items: center; gap: 10px; cursor: pointer; transition: transform .25s var(--ease); }
 .cat-bubble:hover { transform: translateY(-4px); }
 .bubble-img    { width: 86px; height: 86px; border-radius: 50%; overflow: hidden; border: 2.5px solid var(--border); background: var(--muted); transition: all .25s var(--ease); }
-.cat-bubble:hover .bubble-img { border-color: var(--brand); box-shadow: 0 0 0 4px rgba(192,57,43,.1); transform: scale(1.06); }
+.cat-bubble:hover .bubble-img { border-color: var(--brand); box-shadow: 0 0 0 4px rgba(14,92,85,.1); transform: scale(1.06); }
 .bubble-img img   { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
 .cat-bubble:hover .bubble-img img { transform: scale(1.1); }
 .bubble-label { font-size: 12px; font-weight: 600; color: var(--fg); letter-spacing: .2px; }
@@ -335,18 +340,18 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 /* ── CATEGORY FILTERS ── */
 .cat-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
 .cat-filter {
-  padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 600;
+  padding: 8px 20px; border-radius: var(--r-md); font-size: 13px; font-weight: 600;
   border: 1.5px solid var(--border); background: #fff; color: var(--fg);
   transition: all .25s var(--ease); cursor: pointer;
 }
 .cat-filter:hover { border-color: var(--brand); color: var(--brand); }
-.cat-filter.active { background: var(--brand); color: #fff; border-color: var(--brand); box-shadow: 0 4px 12px rgba(192,57,43,.25); }
+.cat-filter.active { background: var(--brand); color: #fff; border-color: var(--brand); box-shadow: 0 4px 12px rgba(14,92,85,.25); }
 .cat-filter.active:hover { background: var(--brand-dk); }
 
 /* ── SECTION SHELL ── */
 .sec       { padding: 72px 0; }
 .sec-inner { max-width: 1200px; margin: 0 auto; padding: 0 56px; }
-.sec-tag   { display: inline-block; background: var(--brand-lt); color: var(--brand); border: 1px solid rgba(192,57,43,.15); padding: 3px 14px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+.sec-tag   { display: inline-block; background: var(--brand-lt); color: var(--brand); border: 1px solid rgba(14,92,85,.15); padding: 3px 14px; border-radius: var(--r-md); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
 .sec-title { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--fg); line-height: 1.1; margin-bottom: 10px; }
 .sec-title em { font-style: italic; color: var(--brand); }
 
@@ -365,8 +370,8 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .pc.fade-in { animation: cardFadeIn .5s var(--ease) both; }
 @keyframes cardFadeIn { from { opacity: 0; transform: translateY(20px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
 .pc::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--brand), var(--gold));
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background-image: var(--motif);
   transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); z-index: 2;
 }
 .pc:hover::before { transform: scaleX(1); }
@@ -400,19 +405,18 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .quick-wa:hover { transform: translateY(-1px); }
 .quick-wa svg { width: 14px; height: 14px; flex-shrink: 0; }
 .pc-badge     { position: absolute; top: 10px; left: 10px; z-index: 3; }
-.badge        { display: inline-block; padding: 3px 10px; border-radius: 50px; font-size: 10px; font-weight: 700; letter-spacing: .3px; animation: badgePulse 2s ease-in-out infinite; }
-@keyframes badgePulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(192,57,43,.2); } 50% { box-shadow: 0 0 0 4px rgba(192,57,43,0); } }
+.badge        { display: inline-block; padding: 3px 10px; border-radius: var(--r-md); font-size: 10px; font-weight: 700; letter-spacing: .3px; }
 .b-new        { background: #ECFDF5; color: #065F46; }
-.b-pop        { background: #FFFBEB; color: #92400E; }
+.b-pop        { background: var(--gold-lt); color: #7A5613; }
 .wishlist-btn { position: absolute; top: 10px; right: 10px; z-index: 3; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.92); display: grid; place-items: center; color: var(--text-muted); transition: all .25s var(--ease); backdrop-filter: blur(4px); }
-.wishlist-btn:hover { background: #fff; color: var(--brand); transform: scale(1.1); }
-.wishlist-btn.active { color: var(--brand); background: var(--brand-lt); }
+.wishlist-btn:hover { background: #fff; color: var(--rust); transform: scale(1.1); }
+.wishlist-btn.active { color: var(--rust); background: #FBEEE9; }
 .wishlist-btn svg { width: 16px; height: 16px; }
-.wishlist-btn.active svg { fill: var(--brand); stroke: var(--brand); }
+.wishlist-btn.active svg { fill: var(--rust); stroke: var(--rust); }
 .pc-body      { padding: 16px 16px 18px; flex: 1; display: flex; flex-direction: column; }
 .pc-meta      { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
 .pc-label     { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); }
-.pc-price     { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--brand); }
+.pc-price     { font-family: var(--hand); font-size: 22px; font-weight: 700; color: var(--rust); transform: rotate(-3deg); display: inline-block; }
 .pc-name      { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--fg); margin-bottom: 6px; line-height: 1.25; }
 .pc-desc      { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; flex: 1; margin-bottom: 14px; }
 .pc-btn       { display: flex; align-items: center; justify-content: center; gap: 7px; background: #25D366; color: #fff; padding: 11px; border-radius: var(--r-sm); font-size: 13px; font-weight: 700; transition: all .25s var(--ease); box-shadow: 0 3px 10px rgba(37,211,102,.25); position: relative; overflow: hidden; }
@@ -436,7 +440,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .lightbox-name { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
 .lightbox-cat  { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 10px; }
 .lightbox-desc { font-size: 14px; color: var(--fg2); line-height: 1.7; margin-bottom: 16px; }
-.lightbox-price { font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--brand); margin-bottom: 16px; }
+.lightbox-price { font-family: var(--hand); font-size: 32px; font-weight: 700; color: var(--rust); margin-bottom: 16px; transform: rotate(-2deg); display: inline-block; }
 .lightbox-actions { display: flex; gap: 10px; }
 .lightbox-close {
   position: absolute; top: 16px; right: 16px; width: 40px; height: 40px;
@@ -446,30 +450,24 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .lightbox-close:hover { background: rgba(255,255,255,.3); transform: rotate(90deg); }
 
 /* ── WHY CHOOSE US ── */
-.why-sec  { background: linear-gradient(135deg, #FDF0EE 0%, #FFF8E7 50%, #FDF0EE 100%); padding: 80px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.why-sec  { background: linear-gradient(135deg, var(--brand-lt) 0%, var(--gold-lt) 50%, var(--brand-lt) 100%); padding: 80px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .why-inner{ max-width: 1200px; margin: 0 auto; padding: 0 56px; }
 .why-header { text-align: center; margin-bottom: 52px; }
-.why-eyebrow { display: inline-block; background: rgba(192,57,43,.1); border: 1px solid rgba(192,57,43,.2); color: var(--brand); padding: 4px 16px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 14px; }
+.why-eyebrow { display: inline-block; background: rgba(14,92,85,.1); border: 1px solid rgba(14,92,85,.2); color: var(--brand); padding: 4px 16px; border-radius: var(--r-md); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 14px; }
 .why-title   { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; color: var(--fg); line-height: 1.15; margin-bottom: 10px; }
 .why-title em{ font-style: italic; color: var(--brand); }
 .why-sub     { font-size: 15px; color: var(--text-muted); max-width: 520px; margin: 0 auto; line-height: 1.75; }
 .why-grid    { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .why-card    { background: #fff; border-radius: var(--r-xl); padding: 36px 24px; text-align: center; border: 1px solid var(--border); transition: all .35s var(--ease); position: relative; overflow: hidden; }
-.why-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--brand), var(--gold)); transform: scaleX(0); transform-origin: center; transition: transform .3s var(--ease); }
+.why-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 5px; background-image: var(--motif); transform: scaleX(0); transform-origin: center; transition: transform .3s var(--ease); }
 .why-card:hover::after { transform: scaleX(1); }
 .why-card:hover { transform: translateY(-8px); box-shadow: var(--sh-lg); border-color: transparent; }
-.why-icon        { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, var(--brand-lt), var(--gold-lt)); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px; transition: transform .35s var(--ease-bounce); }
-.why-card:hover .why-icon { transform: scale(1.15) rotate(-5deg); }
+.why-icon        { width: 64px; height: 64px; border-radius: 50%; background: var(--brand-lt); border: 1px solid rgba(14,92,85,.15); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--brand); transition: transform .3s var(--ease); }
+.why-icon svg    { width: 26px; height: 26px; }
+.why-card:hover .why-icon { transform: scale(1.08); background: var(--brand); color: #fff; }
 .why-card-title  { font-family: var(--serif); font-size: 19px; font-weight: 700; color: var(--fg); margin-bottom: 10px; line-height: 1.2; }
 .why-card-desc   { font-size: 13.5px; color: var(--text-muted); line-height: 1.75; }
 .why-cta         { text-align: center; margin-top: 48px; }
-
-/* ── TESTIMONIAL STRIP ── */
-.testi-strip { background: var(--fg); overflow: hidden; height: 52px; display: flex; align-items: center; border-top: 1px solid rgba(255,255,255,.06); }
-.testi-track { display: flex; white-space: nowrap; animation: marquee 35s linear infinite; }
-.testi-track:hover { animation-play-state: paused; }
-.testi-item  { display: inline-flex; align-items: center; gap: 10px; padding: 0 40px; height: 52px; border-right: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.75); font-size: 13px; font-style: italic; flex-shrink: 0; }
-.testi-stars { color: #F59E0B; font-size: 11px; letter-spacing: 1px; font-style: normal; }
 
 /* ── ABOUT ── */
 .about-sec   { background: #fff; }
@@ -480,8 +478,8 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .about-gallery img:first-child { grid-column: 1 / -1; height: 220px; }
 .about-gallery img:not(:first-child) { height: 148px; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-.chip  { background: var(--muted); border: 1px solid var(--border); color: var(--fg2); padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 500; transition: all .2s var(--ease); cursor: default; }
-.chip:hover { background: var(--brand-lt); border-color: rgba(192,57,43,.2); color: var(--brand); transform: translateY(-2px); box-shadow: var(--sh-xs); }
+.chip  { background: var(--muted); border: 1px solid var(--border); color: var(--fg2); padding: 6px 16px; border-radius: var(--r-md); font-size: 13px; font-weight: 500; transition: all .2s var(--ease); cursor: default; }
+.chip:hover { background: var(--brand-lt); border-color: rgba(14,92,85,.2); color: var(--brand); transform: translateY(-2px); box-shadow: var(--sh-xs); }
 
 /* ── REVIEWS ── */
 .rev-sec { background: var(--bg); }
@@ -497,32 +495,33 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 
 /* ── CONTACT ── */
 .contact-sec {
-  background: linear-gradient(135deg, var(--fg) 0%, #3A0E0A 55%, #1A0A08 100%);
+  background: linear-gradient(135deg, var(--fg) 0%, #0F3B36 55%, #14100C 100%);
   color: #fff; padding: 80px 0; position: relative; overflow: hidden;
 }
 .contact-sec::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(circle at 8% 55%, rgba(192,57,43,.2) 0%, transparent 55%),
-    radial-gradient(circle at 90% 20%, rgba(212,160,23,.1) 0%, transparent 45%);
+    radial-gradient(circle at 8% 55%, rgba(14,92,85,.2) 0%, transparent 55%),
+    radial-gradient(circle at 90% 20%, rgba(192,138,46,.12) 0%, transparent 45%);
 }
 .contact-inner { max-width: 1200px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; position: relative; z-index: 1; }
-.contact-tag { display: inline-block; background: rgba(192,57,43,.22); border: 1px solid rgba(192,57,43,.35); color: #FCA5A5; padding: 3px 14px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+.contact-tag { display: inline-block; background: rgba(14,92,85,.22); border: 1px solid rgba(14,92,85,.35); color: #FCA5A5; padding: 3px 14px; border-radius: var(--r-md); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
 .contact-h2  { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; line-height: 1.1; margin-bottom: 12px; }
 .contact-h2 em { font-style: italic; color: var(--gold); }
 .contact-sub { color: rgba(255,255,255,.6); font-size: 15px; line-height: 1.75; margin-bottom: 32px; }
 .contact-btns { display: flex; flex-direction: column; gap: 12px; }
 .c-btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 32px; border-radius: var(--r-md); font-size: 15px; font-weight: 700; min-height: 50px; transition: all .25s var(--ease); position: relative; overflow: hidden; }
 .c-btn svg { width: 19px; height: 19px; flex-shrink: 0; }
-.c-call { background: var(--brand); color: #fff; box-shadow: 0 4px 16px rgba(192,57,43,.35); }
+.c-call { background: var(--brand); color: #fff; box-shadow: 0 4px 16px rgba(14,92,85,.35); }
 .c-call:hover { background: var(--brand-dk); transform: translateY(-2px); }
 .c-wa   { background: #25D366; color: #fff; box-shadow: 0 4px 16px rgba(37,211,102,.32); }
 .c-wa:hover { background: #1EB858; transform: translateY(-2px); }
 .info-list { display: flex; flex-direction: column; gap: 12px; }
 .info-item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r-md); padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start; transition: all .25s; cursor: default; }
 .info-item:hover { background: rgba(255,255,255,.1); transform: translateX(4px); }
-.info-icon  { width: 42px; height: 42px; background: var(--brand); border-radius: var(--r-sm); display: grid; place-items: center; font-size: 17px; flex-shrink: 0; transition: transform .3s var(--ease-bounce); }
-.info-item:hover .info-icon { transform: scale(1.1) rotate(-5deg); }
+.info-icon  { width: 42px; height: 42px; background: var(--brand); border-radius: var(--r-sm); display: grid; place-items: center; color: #fff; flex-shrink: 0; transition: transform .25s var(--ease); }
+.info-icon svg { width: 19px; height: 19px; }
+.info-item:hover .info-icon { transform: scale(1.06); }
 .info-title { font-weight: 700; font-size: 13.5px; color: #fff; margin-bottom: 3px; }
 .info-val   { font-size: 12.5px; color: rgba(255,255,255,.6); line-height: 1.6; }
 .copy-btn   { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; font-size: 11px; color: var(--gold); cursor: pointer; transition: opacity .2s; }
@@ -553,14 +552,11 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
   display: none; position: fixed; bottom: 20px; right: 18px; z-index: 9000;
   width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff;
   align-items: center; justify-content: center;
-  box-shadow: 0 6px 24px rgba(37,211,102,.5);
-  animation: fabPulse 2.5s ease-in-out infinite;
+  box-shadow: 0 6px 24px rgba(37,211,102,.4);
+  transition: transform .2s var(--ease);
 }
+.mob-wa-fab:active { transform: scale(.94); }
 .mob-wa-fab svg { width: 28px; height: 28px; }
-@keyframes fabPulse {
-  0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,.5); }
-  50%       { box-shadow: 0 6px 32px rgba(37,211,102,.75), 0 0 0 8px rgba(37,211,102,.15); }
-}
 
 /* ── KEYFRAMES ── */
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -647,7 +643,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
   width: 56px; height: 56px; border-radius: 50%;
   background: var(--brand); color: #fff;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 6px 24px rgba(192,57,43,.45);
+  box-shadow: 0 6px 24px rgba(14,92,85,.45);
   transition: transform .25s var(--ease);
 }
 .chat-fab:hover { transform: scale(1.06); }
@@ -703,7 +699,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 .chat-handoff p { font-size: 12px; color: #065F46; margin-bottom: 8px; font-weight: 600; }
 .chat-handoff a {
   display: inline-flex; align-items: center; gap: 6px; justify-content: center;
-  background: #25D366; color: #fff; padding: 9px 16px; border-radius: 50px;
+  background: #25D366; color: #fff; padding: 9px 16px; border-radius: var(--r-md);
   font-size: 12.5px; font-weight: 700; width: 100%;
 }
 .chat-handoff a svg { width: 14px; height: 14px; }
@@ -735,7 +731,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
 
 <!-- ANNOUNCEMENT BAR -->
 <div class="ann-bar" aria-hidden="true">
-  <div class="ann-track" data-marquee><span>✨ New arrivals added daily</span><span>💬 Order on WhatsApp: +91 9998148511</span><span>📍 Dindoli, Surat, Gujarat</span><span>🛍️ Sarees</span><span>⭐ 4.9 Star Rated by 5000+ Customers</span></div>
+  <div class="ann-track" data-marquee><span>New arrivals added daily</span><span>Order on WhatsApp — +91 9998148511</span><span>Dindoli, Surat, Gujarat</span><span>4.9★ rated by 5000+ customers</span></div>
 </div>
 
 <!-- NAVIGATION -->
@@ -761,12 +757,12 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
     <div class="nav-item" role="none">
       <span role="menuitem" aria-haspopup="true">Wedding Picks <svg class="caret" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 4l3 3 3-3"/></svg></span>
       <div class="dropdown" role="menu">
-        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Bridal%20Sarees." target="_blank" rel="noopener" role="menuitem">💍 Bridal Sarees</a>
-        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Haldi%20Wear."   target="_blank" rel="noopener" role="menuitem">🌼 Haldi Wear</a>
-        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Mehndi%20Wear."  target="_blank" rel="noopener" role="menuitem">🌿 Mehndi Wear</a>
-        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Sangeet%20Wear." target="_blank" rel="noopener" role="menuitem">💃 Sangeet Wear</a>
+        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Bridal%20Sarees." target="_blank" rel="noopener" role="menuitem">Bridal Sarees</a>
+        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Haldi%20Wear."   target="_blank" rel="noopener" role="menuitem">Haldi Wear</a>
+        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Mehndi%20Wear."  target="_blank" rel="noopener" role="menuitem">Mehndi Wear</a>
+        <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Sangeet%20Wear." target="_blank" rel="noopener" role="menuitem">Sangeet Wear</a>
         <div class="dd-divider"></div>
-        <a href="https://wa.me/919998148511?text=Hi!%20I%20need%20help%20with%20gifting."    target="_blank" rel="noopener" role="menuitem">🎁 Gifting</a>
+        <a href="https://wa.me/919998148511?text=Hi!%20I%20need%20help%20with%20gifting."    target="_blank" rel="noopener" role="menuitem">Gifting</a>
       </div>
     </div>
     <div class="nav-item" role="none"><a href="#about"   role="menuitem">About Us</a></div>
@@ -786,7 +782,7 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
       </video>
     </div>
     <div class="hero-content">
-      <div class="hero-eyebrow">⭐ Surat's Favourite Saree Shop</div>
+      <div class="hero-eyebrow">Surat, Gujarat<span class="hero-eyebrow-rule" aria-hidden="true"></span></div>
       <div class="hero-logo-block">
         <div class="hero-logo-ring">
           <img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.48.18%20logo.jpeg" alt="Shuhaagan Sarees Logo" width="84" height="84">
@@ -814,8 +810,8 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
   </section>
 
   <!-- TRUST STRIP -->
-  <div class="trust-strip" aria-hidden="true">
-    <div class="trust-track" data-marquee>
+  <div class="trust-strip">
+    <div class="trust-track">
 <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Quality Assured</div>
 <div class="trust-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>Easy WhatsApp Ordering</div>
 <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9★ Rated by 5000+ Customers</div>
@@ -832,11 +828,11 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
       <div class="cat-bubbles">
         <a href="#collection" class="cat-bubble">
           <div class="bubble-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Sarees" loading="lazy" width="86" height="86"></div>
-          <span class="bubble-label">🥻 Sarees</span>
+          <span class="bubble-label">Sarees</span>
         </a>
         <a href="https://wa.me/919998148511?text=Hi!%20Please%20show%20me%20Bridal%20wear." class="cat-bubble" target="_blank" rel="noopener">
           <div class="bubble-img"><img src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Bridal" loading="lazy" width="86" height="86"></div>
-          <span class="bubble-label">💍 Bridal</span>
+          <span class="bubble-label">Bridal</span>
         </a>
       </div>
     </div>
@@ -852,19 +848,19 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
       <div class="occ-cards">
 <div class="occ-card" role="button" tabindex="0" onclick="App.waOcc('Festive wear sarees')">
   <img class="occ-card-img" src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Festive" loading="lazy" width="156" height="196">
-  <div class="occ-label">🪔 Festive</div>
+  <div class="occ-label">Festive</div>
 </div>
 <div class="occ-card" role="button" tabindex="0" onclick="App.waOcc('Party wear sarees')">
   <img class="occ-card-img" src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.25%20saree2.jpeg" alt="Party" loading="lazy" width="156" height="196">
-  <div class="occ-label">🎉 Party Wear</div>
+  <div class="occ-label">Party Wear</div>
 </div>
 <div class="occ-card" role="button" tabindex="0" onclick="App.waOcc('Daily casual wear')">
   <img class="occ-card-img" src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Daily Wear" loading="lazy" width="156" height="196">
-  <div class="occ-label">🌸 Daily Wear</div>
+  <div class="occ-label">Daily Wear</div>
 </div>
 <div class="occ-card" role="button" tabindex="0" onclick="App.waOcc('Gift sarees for gifting')">
   <img class="occ-card-img" src="https://raw.githubusercontent.com/RajYagnik504/shuhaagan-sarees/main/WhatsApp%20Image%202026-06-15%20at%209.53.26%20saree3.jpeg" alt="Gifting" loading="lazy" width="156" height="196">
-  <div class="occ-label">🎁 Gifting</div>
+  <div class="occ-label">Gifting</div>
 </div></div>
     </div>
   </div>
@@ -960,22 +956,22 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
       </div>
       <div class="why-grid">
 <div class="why-card">
-  <div class="why-icon" aria-hidden="true">🏅</div>
+  <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
   <div class="why-card-title">Quality Assured</div>
   <p class="why-card-desc">Every saree is hand-picked for fabric quality, finish and design before it reaches you.</p>
 </div>
 <div class="why-card">
-  <div class="why-icon" aria-hidden="true">💬</div>
+  <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.525 5.847L.057 23.03a1 1 0 001.265 1.265l5.183-1.468A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.52-5.157-1.424l-.37-.22-3.078.872.872-3.078-.22-.37A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
   <div class="why-card-title">WhatsApp Ordering</div>
   <p class="why-card-desc">No complicated apps or checkouts. Just message us on WhatsApp and we'll send photos, prices and payment details instantly.</p>
 </div>
 <div class="why-card">
-  <div class="why-icon" aria-hidden="true">✨</div>
+  <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></div>
   <div class="why-card-title">New Arrivals Daily</div>
   <p class="why-card-desc">Fresh designs added every single day — always something new to discover.</p>
 </div>
 <div class="why-card">
-  <div class="why-icon" aria-hidden="true">📍</div>
+  <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
   <div class="why-card-title">Dindoli, Surat Based</div>
   <p class="why-card-desc">We're based in Dindoli, Surat — the heart of India's textile industry. Direct from source means better quality at better prices.</p>
 </div></div>
@@ -986,16 +982,6 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
       </div>
     </div>
   </section>
-
-  <!-- TESTIMONIAL STRIP -->
-  <div class="testi-strip" aria-hidden="true">
-    <div class="testi-track" data-marquee>
-<div class="testi-item"><span class="testi-stars" aria-hidden="true">★★★★★</span> "Amazing saree quality!" — Kavita, Adajan</div>
-<div class="testi-item"><span class="testi-stars" aria-hidden="true">★★★★★</span> "WhatsApp ordering was so easy!" — Sneha, Vesu</div>
-<div class="testi-item"><span class="testi-stars" aria-hidden="true">★★★★★</span> "New designs every day — love it!" — Meera, Adajan</div>
-<div class="testi-item"><span class="testi-stars" aria-hidden="true">★★★★★</span> "Best saree shop in Surat!" — Anita, Katargam</div>
-<div class="testi-item"><span class="testi-stars" aria-hidden="true">★★★★★</span> "Got compliments all night at the wedding!" — Pooja, Pal</div></div>
-  </div>
 
   <!-- ABOUT -->
   <section class="sec about-sec" id="about" aria-labelledby="about-h">
@@ -1073,14 +1059,14 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
       </div>
       <div class="info-list">
         <div class="info-item">
-          <div class="info-icon">📍</div>
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div>
             <div class="info-title">Our Location</div>
             <div class="info-val">5V3H+GW9 Shree Krishna A.C. Mall, Flower Garden Rd, Royal Star Township, Rami Park, Dindoli, Surat, Gujarat 394210</div>
           </div>
         </div>
         <div class="info-item">
-          <div class="info-icon">📞</div>
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.8 19.79 19.79 0 01.39 2.18 2 2 0 012.37 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.7 7.56a16 16 0 006.74 6.74l1.92-1.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
           <div>
             <div class="info-title">Phone &amp; WhatsApp</div>
             <div class="info-val">+91 9998148511</div>
@@ -1088,14 +1074,14 @@ button{ font-family: var(--sans); cursor: pointer; border: none; background: non
           </div>
         </div>
         <div class="info-item">
-          <div class="info-icon">🛍️</div>
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
           <div>
             <div class="info-title">Categories</div>
             <div class="info-val">Sarees &amp; more</div>
           </div>
         </div>
         <div class="info-item">
-          <div class="info-icon">📦</div>
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 8L12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></div>
           <div>
             <div class="info-title">How to Order</div>
             <div class="info-val">Browse our catalog and message us on WhatsApp — fast and easy!</div>
